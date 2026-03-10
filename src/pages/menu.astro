@@ -1,0 +1,227 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+interface MenuItem {
+  name: string;
+  description?: string;
+  price: string;
+  tags?: string[];
+  image: string;
+  imageAlt: string;
+}
+
+const breakfast: MenuItem[] = [
+  { name: 'The Kin Bowl', description: 'Poached eggs, smashed avo, pickled radish, dukkah, sourdough', price: '$22', tags: ['VG'], image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&h=400&fit=crop', imageAlt: 'Breakfast bowl with poached eggs, smashed avocado and dukkah on sourdough' },
+  { name: 'Banana Buckwheat Pancakes', description: 'Maple mascarpone, fresh berries, toasted coconut', price: '$19', tags: ['VG'], image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=400&fit=crop', imageAlt: 'Fluffy pancakes stacked with fresh berries and maple syrup' },
+  { name: 'Smoked Salmon Benedict', description: 'House-cured salmon, hollandaise, wilted spinach, sourdough', price: '$24', image: 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=400&h=400&fit=crop', imageAlt: 'Eggs benedict with smoked salmon and hollandaise on sourdough' },
+  { name: 'Mushroom & Truffle Scramble', description: 'Free-range eggs, mixed mushrooms, truffle oil, ciabatta', price: '$21', tags: ['VG'], image: 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&h=400&fit=crop', imageAlt: 'Scrambled eggs with sautéed mushrooms on toasted ciabatta' },
+  { name: 'Acai Bowl', description: 'Acai blend, granola, seasonal fruit, coconut, honey', price: '$17', tags: ['GF', 'VG'], image: 'https://images.unsplash.com/photo-1590301157890-4810ed352733?w=400&h=400&fit=crop', imageAlt: 'Purple acai smoothie bowl topped with granola, berries and coconut' },
+  { name: 'Classic Big Breakfast', description: 'Eggs your way, bacon, sausage, roasted tomato, mushroom, sourdough', price: '$25', image: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=400&h=400&fit=crop', imageAlt: 'Full breakfast plate with eggs, bacon, sausage, tomato and sourdough toast' },
+];
+
+const lunch: MenuItem[] = [
+  { name: 'Grain Bowl', description: 'Quinoa, roasted sweet potato, tahini, mixed greens, pepitas, feta', price: '$19', tags: ['VG', 'GF'], image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=400&fit=crop', imageAlt: 'Colorful grain bowl with quinoa, roasted sweet potato and fresh greens' },
+  { name: 'Grilled Chicken Burger', description: 'Herb-marinated chicken, slaw, aioli, brioche bun, hand-cut chips', price: '$22', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop', imageAlt: 'Grilled chicken burger with slaw on a brioche bun with chips' },
+  { name: 'Crispy Cauliflower Tacos', description: 'Chipotle crema, pickled onion, coriander, corn tortillas', price: '$18', tags: ['V', 'GF'], image: 'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400&h=400&fit=crop', imageAlt: 'Crispy cauliflower tacos with pickled onion and crema on corn tortillas' },
+  { name: 'Steak Sandwich', description: 'Scotch fillet, caramelised onion, rocket, tomato relish, Turkish bread', price: '$24', image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=400&fit=crop', imageAlt: 'Steak sandwich with caramelised onion and rocket on Turkish bread' },
+  { name: 'Caesar Salad', description: 'Cos lettuce, house croutons, parmesan, anchovy dressing, soft egg', price: '$18', image: 'https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=400&h=400&fit=crop', imageAlt: 'Classic caesar salad with croutons, parmesan shavings and a soft egg' },
+];
+
+const drinks: MenuItem[] = [
+  { name: 'Espresso / Long Black', price: '$4.5', image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=400&h=400&fit=crop', imageAlt: 'Espresso shot in a small white ceramic cup' },
+  { name: 'Flat White / Latte / Cappuccino', price: '$5.5', image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&h=400&fit=crop', imageAlt: 'Latte with delicate rosetta latte art in a ceramic cup' },
+  { name: 'Single Origin Pour Over', price: '$7', image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=400&h=400&fit=crop', imageAlt: 'Pour-over coffee being brewed through a ceramic dripper' },
+  { name: 'Matcha Latte', description: 'Organic ceremonial grade, oat milk', price: '$6.5', image: 'https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=400&h=400&fit=crop', imageAlt: 'Vibrant green matcha latte in a ceramic cup with latte art' },
+  { name: 'Fresh Juice', description: 'Orange / Apple / Watermelon', price: '$8', image: 'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=400&h=400&fit=crop', imageAlt: 'Fresh cold-pressed juices in glass bottles' },
+  { name: 'Iced Coffee', description: 'Double shot, milk, ice, vanilla', price: '$7', image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=400&fit=crop', imageAlt: 'Iced coffee with milk swirling in a tall glass' },
+  { name: 'Chai Latte', description: 'House-spiced blend, honey', price: '$6', image: 'https://images.unsplash.com/photo-1557006021-b85faa2bc5e2?w=400&h=400&fit=crop', imageAlt: 'Warm chai latte with cinnamon dusting in a ceramic mug' },
+];
+
+const sweets: MenuItem[] = [
+  { name: 'Banana Bread', description: 'House-baked, served warm with butter', price: '$7', tags: ['VG'], image: 'https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=400&h=400&fit=crop', imageAlt: 'Sliced banana bread with butter on a wooden board' },
+  { name: 'Croissant', description: 'Classic butter or almond', price: '$6.5 / $7.5', image: 'https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?w=400&h=400&fit=crop', imageAlt: 'Flaky golden croissant on a plate' },
+  { name: 'Blueberry Muffin', price: '$6', tags: ['VG'], image: 'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=400&h=400&fit=crop', imageAlt: 'Fresh blueberry muffin with a golden crumb top' },
+  { name: 'Raw Caramel Slice', description: 'Dates, cashew, cacao, coconut', price: '$8', tags: ['V', 'GF', 'DF'], image: 'https://images.unsplash.com/photo-1604152135912-04a022e23696?w=400&h=400&fit=crop', imageAlt: 'Raw caramel slice with layers of dates, cashew and cacao' },
+  { name: 'Cookie', description: 'Choc chip or peanut butter', price: '$5', image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=400&fit=crop', imageAlt: 'Freshly baked chocolate chip cookies on parchment paper' },
+];
+
+const categories = [
+  { id: 'breakfast', label: 'Breakfast', items: breakfast },
+  { id: 'lunch', label: 'Lunch', items: lunch },
+  { id: 'drinks', label: 'Coffee & Drinks', items: drinks },
+  { id: 'sweets', label: 'Sweet Treats', items: sweets },
+];
+
+const tagColors: Record<string, { bg: string; text: string }> = {
+  VG: { bg: 'bg-[#e8f0e4]', text: 'text-olive' },
+  V:  { bg: 'bg-[#d4e8cd]', text: 'text-[#2d5016]' },
+  GF: { bg: 'bg-[#fce8d8]', text: 'text-[#8b5c34]' },
+  DF: { bg: 'bg-[#fef3e2]', text: 'text-[#7a6230]' },
+};
+---
+
+<Layout
+  title="Menu — Kin & Grain | Specialty Coffee & Wholesome Food"
+  description="Explore the Kin & Grain menu. Fresh breakfast, wholesome lunch, specialty coffee, and house-baked sweet treats. Made in-house daily with seasonal produce."
+>
+
+  <!-- ═══ PAGE HEADER ════════════════════════════════════════════ -->
+  <section class="bg-cream">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 pt-12 pb-10 md:pt-20 md:pb-14 lg:pt-24 lg:pb-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div class="lg:col-span-6">
+          <p class="overline mb-4">Kin & Grain</p>
+          <h1 class="mb-6">Our Menu</h1>
+          <p class="leading-relaxed" style="color: var(--color-muted);">
+            Fresh, seasonal, made in-house daily.
+          </p>
+          <p class="text-sm mt-4" style="color: var(--color-muted);">
+            <span class="font-medium text-charcoal">Dietary tags:</span>
+            <span class="diet-tag bg-[#fce8d8] text-[#8b5c34] ml-1">GF</span> Gluten Free ·
+            <span class="diet-tag bg-[#d4e8cd] text-[#2d5016]">V</span> Vegan ·
+            <span class="diet-tag bg-[#fef3e2] text-[#7a6230]">DF</span> Dairy Free ·
+            <span class="diet-tag bg-[#e8f0e4] text-olive">VG</span> Vegetarian
+          </p>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="rounded-2xl aspect-[16/9] img-warm-wash overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&h=500&fit=crop" alt="Beautifully plated brunch dishes on a sunlit cafe table" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ DAILY SPECIALS BANNER ══════════════════════════════════ -->
+  <section class="bg-terracotta/8 border-y border-terracotta/10">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-6">
+      <div class="flex items-start gap-4">
+        <span class="text-terracotta text-xl leading-none mt-0.5">✦</span>
+        <div>
+          <p class="font-serif text-lg text-charcoal mb-1">Daily Specials</p>
+          <p class="text-sm" style="color: var(--color-muted);">
+            Our specials change daily based on seasonal produce. Ask our team for today's offerings.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ MENU NAVIGATION ════════════════════════════════════════ -->
+  <div class="bg-offwhite sticky top-20 lg:top-[88px] z-40 border-b border-warm-border">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12">
+      <nav class="flex gap-8 overflow-x-auto" aria-label="Menu categories">
+        {categories.map(({ id, label }) => (
+          <a
+            href={`#${id}`}
+            class="menu-tab shrink-0 py-4 text-sm font-medium tracking-[0.03em] border-b-2 border-transparent text-charcoal/60 hover:text-terracotta hover:border-terracotta/40 transition-all duration-200"
+            data-section={id}
+          >
+            {label}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </div>
+
+
+  <!-- ═══ MENU SECTIONS ══════════════════════════════════════════ -->
+  <section class="bg-offwhite">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24">
+
+      {categories.map(({ id, label, items }, catIndex) => (
+        <div id={id} class={`${catIndex > 0 ? 'mt-20 lg:mt-28 pt-8' : ''}`}>
+          <div class="mb-10 lg:mb-14 reveal">
+            <p class="overline mb-3">{String(catIndex + 1).padStart(2, '0')}</p>
+            <h2>{label}</h2>
+            <div class="editorial-line mt-4"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-0">
+            {items.map((item) => (
+              <article class="group py-6 border-b border-charcoal/6 reveal">
+                <div class="flex items-start gap-4">
+                  <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 mt-0.5">
+                    <img src={item.image} alt={item.imageAlt} class="w-full h-full object-cover" loading="lazy" />
+                  </div>
+                  <div class="flex items-start justify-between gap-4 flex-1 min-w-0">
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-3 flex-wrap">
+                        <h3 class="text-[1.125rem] leading-snug group-hover:text-terracotta transition-colors duration-200">
+                          {item.name}
+                        </h3>
+                        {item.tags?.map((tag) => {
+                          const colors = tagColors[tag];
+                          return (
+                            <span class={`diet-tag ${colors?.bg} ${colors?.text}`}>
+                              {tag}
+                            </span>
+                          );
+                        })}
+                      </div>
+                      {item.description && (
+                        <p class="text-sm leading-relaxed mt-2" style="color: var(--color-muted);">
+                          {item.description}
+                        </p>
+                      )}
+                    </div>
+                    <span class="text-terracotta font-medium text-base shrink-0 mt-0.5 tabular-nums">
+                      {item.price}
+                    </span>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      ))}
+
+    </div>
+  </section>
+
+
+  <!-- ═══ ALLERGEN NOTICE ════════════════════════════════════════ -->
+  <section class="bg-cream">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-12 lg:py-16">
+      <div class="max-w-[640px] mx-auto text-center reveal">
+        <p class="text-sm leading-relaxed" style="color: var(--color-muted);">
+          <span class="font-medium text-charcoal">Allergen notice:</span> Please inform our staff of any allergies or dietary requirements. We handle gluten, nuts, dairy, and other allergens in our kitchen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  // Highlight active menu tab on scroll
+  const tabs = document.querySelectorAll('.menu-tab');
+  const sections = ['breakfast', 'lunch', 'drinks', 'sweets'].map(id => document.getElementById(id));
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          tabs.forEach((tab) => {
+            const isActive = tab.getAttribute('data-section') === id;
+            if (isActive) {
+              tab.classList.add('text-terracotta', 'border-terracotta');
+              tab.classList.remove('text-charcoal/60', 'border-transparent');
+            } else {
+              tab.classList.remove('text-terracotta', 'border-terracotta');
+              tab.classList.add('text-charcoal/60', 'border-transparent');
+            }
+          });
+        }
+      });
+    },
+    { rootMargin: '-120px 0px -60% 0px', threshold: 0 }
+  );
+
+  sections.forEach((section) => {
+    if (section) observer.observe(section);
+  });
+</script>

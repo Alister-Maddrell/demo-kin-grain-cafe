@@ -1,0 +1,271 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Kin & Grain — Specialty Coffee & Wholesome Food | Sydney CBD"
+  description="Kin & Grain is a Sydney CBD cafe on Market Street serving specialty single-origin coffee and wholesome, locally sourced meals. Open daily."
+>
+
+  <!-- ═══ HERO ═══════════════════════════════════════════════════ -->
+  <section class="bg-offwhite">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 pt-12 pb-16 md:pt-20 md:pb-24 lg:pt-[120px] lg:pb-[120px]">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+
+        <!-- Text — 5 columns (asymmetric: narrower text, wider image) -->
+        <div class="lg:col-span-5 order-2 lg:order-1">
+          <p class="overline mb-6">Est. 2019 · Sydney CBD</p>
+          <h1 class="text-charcoal mb-6">
+            Specialty Coffee &amp; Wholesome Food in the Heart of Sydney
+          </h1>
+          <p class="text-charcoal-light leading-relaxed mb-10 max-w-[48ch]" style="color: var(--color-muted);">
+            Ethically sourced beans. Locally grown produce. Made with care, every single day.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="/menu"
+              class="inline-flex items-center px-7 py-3.5 bg-terracotta text-white text-sm font-medium tracking-[0.03em] rounded-full hover:bg-terracotta-dark transition-colors duration-200 btn-press"
+            >
+              See Our Menu
+            </a>
+            <a
+              href="/contact"
+              class="inline-flex items-center px-7 py-3.5 border-2 border-charcoal/20 text-charcoal text-sm font-medium tracking-[0.03em] rounded-full hover:border-terracotta hover:text-terracotta transition-colors duration-200"
+            >
+              Find Us
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero image placeholder — 7 columns -->
+        <div class="lg:col-span-7 order-1 lg:order-2">
+          <div class="rounded-2xl aspect-[4/3] lg:aspect-[3/2] img-warm-wash overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&h=800&fit=crop" alt="Cozy cafe interior with warm lighting, wooden tables and hanging plants" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ OUR STORY ══════════════════════════════════════════════ -->
+  <section class="bg-cream">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-20 md:py-24 lg:py-[120px]">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+
+        <!-- Image — 5 columns -->
+        <div class="lg:col-span-5 reveal">
+          <div class="rounded-2xl aspect-[4/5] img-warm-wash overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&h=1000&fit=crop" alt="Barista carefully preparing a pour-over coffee behind the counter" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <!-- Text — 7 columns, offset top for editorial feel -->
+        <div class="lg:col-span-7 lg:pt-12 reveal">
+          <p class="overline mb-4">Our Story</p>
+          <div class="flourish mb-6"><span class="text-terracotta/40 text-sm">✦</span></div>
+          <h2 class="mb-8">A Place Where Good Food Brings People Together</h2>
+          <div class="max-w-[55ch]">
+            <p class="leading-relaxed mb-6" style="color: var(--color-muted);">
+              Kin &amp; Grain was born from a simple belief: that good food brings people together. Since 2019, we've been serving specialty single-origin coffee and wholesome, locally sourced meals from our home on Market Street.
+            </p>
+            <p class="leading-relaxed" style="color: var(--color-muted);">
+              Every dish is made fresh in-house, and every cup is brewed with intention. We're more than a cafe — we're your neighbourhood kitchen.
+            </p>
+          </div>
+          <div class="editorial-line mt-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FEATURED MENU ══════════════════════════════════════════ -->
+  <section class="bg-offwhite">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-20 md:py-24 lg:py-[120px]">
+
+      <div class="text-center mb-14 lg:mb-20 reveal">
+        <p class="overline mb-4">From the Kitchen</p>
+        <h2>What We're Known For</h2>
+      </div>
+
+      <!-- 3 featured cards — asymmetric gap, varying image aspect -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+
+        <!-- Card 1 -->
+        <article class="group reveal">
+          <div class="overflow-hidden rounded-xl mb-6">
+            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&h=750&fit=crop" alt="Breakfast bowl with poached eggs, smashed avocado and fresh greens on sourdough" class="aspect-[4/5] w-full object-cover img-zoom" />
+          </div>
+          <div class="flex items-start justify-between gap-4 mb-2">
+            <h3 class="group-hover:text-terracotta transition-colors duration-200">The Kin Bowl</h3>
+            <span class="text-terracotta font-medium text-lg shrink-0 mt-1">$22</span>
+          </div>
+          <p class="text-sm leading-relaxed" style="color: var(--color-muted);">
+            Poached eggs, smashed avo, pickled radish, dukkah, sourdough. Our signature breakfast bowl.
+          </p>
+        </article>
+
+        <!-- Card 2 — offset vertically for editorial rhythm -->
+        <article class="group md:mt-12 reveal">
+          <div class="overflow-hidden rounded-xl mb-6">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600&h=750&fit=crop" alt="Single origin pour-over coffee being brewed into a glass carafe" class="aspect-[4/5] w-full object-cover img-zoom" />
+          </div>
+          <div class="flex items-start justify-between gap-4 mb-2">
+            <h3 class="group-hover:text-terracotta transition-colors duration-200">Single Origin Pour Over</h3>
+            <span class="text-terracotta font-medium text-lg shrink-0 mt-1">$7</span>
+          </div>
+          <p class="text-sm leading-relaxed" style="color: var(--color-muted);">
+            Rotating seasonal beans from small farms. This month: Ethiopian Yirgacheffe with notes of blueberry and dark chocolate.
+          </p>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="group reveal">
+          <div class="overflow-hidden rounded-xl mb-6">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=750&fit=crop" alt="Colorful grain bowl with quinoa, roasted sweet potato and fresh vegetables" class="aspect-[4/5] w-full object-cover img-zoom" />
+          </div>
+          <div class="flex items-start justify-between gap-4 mb-2">
+            <h3 class="group-hover:text-terracotta transition-colors duration-200">Grain Bowl</h3>
+            <span class="text-terracotta font-medium text-lg shrink-0 mt-1">$19</span>
+          </div>
+          <p class="text-sm leading-relaxed" style="color: var(--color-muted);">
+            Quinoa, roasted sweet potato, tahini dressing, mixed greens, pepitas, feta. Nourishing and satisfying.
+          </p>
+        </article>
+      </div>
+
+      <div class="text-center mt-14 lg:mt-20">
+        <a href="/menu" class="link-underline font-medium text-charcoal hover:text-terracotta transition-colors duration-200">
+          View Full Menu →
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ PHOTO GRID ═════════════════════════════════════════════ -->
+  <section class="bg-cream">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-20 md:py-24 lg:py-[100px]">
+
+      <p class="overline text-center mb-10 lg:mb-14 reveal">Life at the Cafe</p>
+
+      <!-- Masonry-style grid with varying sizes -->
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-5 reveal">
+        <div class="rounded-xl aspect-square overflow-hidden img-warm-wash row-span-1">
+          <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=600&h=600&fit=crop" alt="Customers enjoying coffee and conversation at a sunlit cafe table" class="w-full h-full object-cover" />
+        </div>
+        <div class="rounded-xl aspect-[3/4] overflow-hidden img-warm-wash md:row-span-2">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=800&fit=crop" alt="Beautifully plated brunch dish with edible flowers and microgreens" class="w-full h-full object-cover" />
+        </div>
+        <div class="rounded-xl aspect-square overflow-hidden img-warm-wash">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&h=600&fit=crop" alt="Latte art in a ceramic cup viewed from above" class="w-full h-full object-cover" />
+        </div>
+        <div class="rounded-xl aspect-[4/3] overflow-hidden img-warm-wash">
+          <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=800&h=600&fit=crop" alt="Fresh seasonal ingredients and herbs arranged on a wooden cutting board" class="w-full h-full object-cover" />
+        </div>
+        <div class="rounded-xl aspect-square overflow-hidden img-warm-wash hidden md:block">
+          <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=600&h=600&fit=crop" alt="Overhead view of a wholesome breakfast spread with pastries and fruit" class="w-full h-full object-cover" />
+        </div>
+        <div class="rounded-xl aspect-square overflow-hidden img-warm-wash hidden md:block">
+          <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&h=600&fit=crop" alt="Barista pouring steamed milk into a coffee cup behind the counter" class="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <a
+          href="https://instagram.com/kinandgrain"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-underline text-sm font-medium text-charcoal hover:text-terracotta transition-colors duration-200"
+        >
+          Follow us @kinandgrain →
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ EMAIL CAPTURE ══════════════════════════════════════════ -->
+  <section class="bg-offwhite">
+    <div class="max-w-[680px] mx-auto px-6 md:px-8 py-20 md:py-24 lg:py-[120px] text-center">
+      <div class="reveal">
+        <p class="overline mb-4">Stay Connected</p>
+        <h2 class="mb-4">Join the Kin &amp; Grain Family</h2>
+        <p class="leading-relaxed mb-10 max-w-[50ch] mx-auto" style="color: var(--color-muted);">
+          Weekly specials, seasonal menus, and event invites — straight to your inbox. No spam, just good food.
+        </p>
+
+        <form id="email-capture" action="https://formspree.io/f/placeholder" method="POST" class="flex flex-col sm:flex-row gap-3 max-w-[480px] mx-auto">
+          <input
+            type="email"
+            name="email"
+            placeholder="Your email address"
+            required
+            class="flex-1 px-5 py-3.5 bg-cream border border-warm-border rounded-full text-sm text-charcoal placeholder-charcoal/35 transition-colors duration-200"
+          />
+          <button
+            type="submit"
+            class="px-7 py-3.5 bg-terracotta text-white text-sm font-medium tracking-[0.03em] rounded-full hover:bg-terracotta-dark transition-colors duration-200 btn-press shrink-0"
+          >
+            Subscribe
+          </button>
+        </form>
+        <p id="email-capture-msg" class="hidden mt-4 text-sm text-olive font-medium">Thank you! You're part of the family now.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ HOURS & LOCATION TEASER ════════════════════════════════ -->
+  <section class="bg-cream">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-20 md:py-24 lg:py-[100px]">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start reveal">
+
+        <!-- Hours -->
+        <div>
+          <p class="overline mb-4">Opening Hours</p>
+          <h2 class="mb-8">Come Say Hello</h2>
+          <dl class="space-y-4 text-lg">
+            <div class="flex justify-between items-baseline border-b border-charcoal/8 pb-4">
+              <dt class="font-serif">Monday – Friday</dt>
+              <dd class="tabular-nums font-medium">6:30am – 4pm</dd>
+            </div>
+            <div class="flex justify-between items-baseline">
+              <dt class="font-serif">Saturday – Sunday</dt>
+              <dd class="tabular-nums font-medium">7:30am – 3pm</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Location -->
+        <div class="md:pt-4">
+          <p class="overline mb-4">Location</p>
+          <h3 class="mb-4">22 Market Street</h3>
+          <p class="mb-2" style="color: var(--color-muted);">Sydney NSW 2000</p>
+          <p class="mb-8" style="color: var(--color-muted);">
+            Between Clarence &amp; Kent Streets, in the heart of the CBD.
+          </p>
+          <a
+            href="/contact"
+            class="inline-flex items-center px-7 py-3 border-2 border-terracotta text-terracotta text-sm font-medium tracking-[0.03em] rounded-full hover:bg-terracotta hover:text-white transition-all duration-200 btn-press"
+          >
+            Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  const captureForm = document.getElementById('email-capture') as HTMLFormElement;
+  const captureMsg = document.getElementById('email-capture-msg');
+
+  captureForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    captureForm.classList.add('hidden');
+    captureMsg?.classList.remove('hidden');
+  });
+</script>

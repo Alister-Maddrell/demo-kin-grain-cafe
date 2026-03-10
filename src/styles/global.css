@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ──────────────────────────────────────────────
+   60-30-10 palette: 60% cream/off-white, 30% charcoal, 10% terracotta
+   Olive used as quiet secondary accent at ~3% frequency
+   8px grid spacing system throughout                              */
+
+@theme {
+  --color-terracotta: #C4704B;
+  --color-terracotta-dark: #A85D3B;
+  --color-terracotta-light: #D4896A;
+  --color-olive: #4A5D3A;
+  --color-olive-dark: #2F3B28;
+  --color-olive-light: #6B7F5A;
+  --color-cream: #F5EDE3;
+  --color-offwhite: #FDFAF6;
+  --color-charcoal: #2C2C2C;
+  --color-charcoal-light: #4A4A4A;
+  --color-warm-border: rgba(44, 44, 44, 0.08);
+  --color-muted: rgba(44, 44, 44, 0.55);
+
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+
+  --ease-organic: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* ── Base ───────────────────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  line-height: 1.65;
+  letter-spacing: 0.005em;
+  color: var(--color-charcoal);
+  background-color: var(--color-offwhite);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Typography Scale ──────────────────────────────────────── */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 2rem + 2.5vw, 4.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(1.875rem, 1.5rem + 1.5vw, 3rem);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-size: clamp(1.375rem, 1.15rem + 0.75vw, 1.75rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.overline {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-terracotta);
+}
+
+/* ── Editorial Elements ────────────────────────────────────── */
+
+.editorial-line {
+  width: 48px;
+  height: 2px;
+  background: var(--color-terracotta);
+}
+
+.flourish {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 120px;
+}
+
+.flourish::before,
+.flourish::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-terracotta-light));
+}
+
+.flourish::after {
+  background: linear-gradient(to left, transparent, var(--color-terracotta-light));
+}
+
+/* ── Nav Glassmorphism ─────────────────────────────────────── */
+
+.nav-scrolled {
+  background: rgba(253, 250, 246, 0.82) !important;
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  border-bottom: 1px solid rgba(196, 112, 75, 0.08);
+  box-shadow: 0 1px 8px rgba(44, 44, 44, 0.04);
+}
+
+/* ── Dietary Tags ──────────────────────────────────────────── */
+
+.diet-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+/* ── Image Placeholders ────────────────────────────────────── */
+
+.placeholder-warm {
+  background: linear-gradient(145deg, #D4A574 0%, #C4704B 35%, #8B5E3C 70%, #5C3D2E 100%);
+}
+
+.placeholder-soft {
+  background: linear-gradient(155deg, #F5EDE3 0%, #E8D5C0 45%, #D4A574 100%);
+}
+
+.placeholder-green {
+  background: linear-gradient(140deg, #8B9E7A 0%, #4A5D3A 55%, #2F3B28 100%);
+}
+
+.placeholder-latte {
+  background: linear-gradient(150deg, #E8D5C0 0%, #C9A882 40%, #A08060 100%);
+}
+
+.placeholder-berry {
+  background: linear-gradient(135deg, #C4704B 0%, #8B4A5E 50%, #5C3D4E 100%);
+}
+
+.placeholder-grain {
+  background: linear-gradient(160deg, #E8D5C0 0%, #C4A468 40%, #8B7840 100%);
+}
+
+.img-warm-wash {
+  position: relative;
+}
+
+.img-warm-wash::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(245,237,227,0.08), rgba(196,112,75,0.06));
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* ── Hover & Micro-interactions ────────────────────────────── */
+
+.card-lift {
+  transition: transform 350ms var(--ease-organic),
+              box-shadow 350ms var(--ease-organic);
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(44, 44, 44, 0.08);
+}
+
+.img-zoom {
+  transition: transform 500ms var(--ease-organic);
+}
+
+.img-zoom:hover {
+  transform: scale(1.04);
+}
+
+.link-underline {
+  background-image: linear-gradient(var(--color-terracotta), var(--color-terracotta));
+  background-size: 0% 1.5px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  transition: background-size 350ms var(--ease-organic);
+  padding-bottom: 2px;
+}
+
+.link-underline:hover {
+  background-size: 100% 1.5px;
+}
+
+.btn-press:active {
+  transform: scale(0.97);
+}
+
+/* ── Scroll Reveal ─────────────────────────────────────────── */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 650ms var(--ease-organic),
+              transform 650ms var(--ease-organic);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Form Focus ────────────────────────────────────────────── */
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 2px;
+}

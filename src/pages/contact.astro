@@ -1,0 +1,297 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const events = [
+  {
+    title: 'Live Acoustic Fridays',
+    description: 'Every Friday 12–2pm. Local musicians, good vibes, great coffee.',
+    date: 'Every Friday',
+  },
+  {
+    title: 'Latte Art Workshop',
+    description: 'Learn to pour like a pro with our head barista. Includes coffee and pastry.',
+    date: 'Saturday 22 March, 9am',
+  },
+  {
+    title: 'Seasonal Menu Launch',
+    description: 'Join us for the first taste of our Autumn menu. Complimentary tastings for the first 50 guests.',
+    date: 'Friday 4 April, 12pm',
+  },
+];
+---
+
+<Layout
+  title="Contact & Visit — Kin & Grain | Sydney CBD Cafe"
+  description="Visit Kin & Grain at 22 Market Street, Sydney CBD. Get directions, opening hours, or enquire about catering and private events."
+>
+
+  <!-- ═══ PAGE HEADER ════════════════════════════════════════════ -->
+  <section class="bg-cream">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 pt-12 pb-10 md:pt-20 md:pb-14 lg:pt-24 lg:pb-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div class="lg:col-span-6">
+          <p class="overline mb-4">Get in Touch</p>
+          <h1 class="mb-6">Visit Us</h1>
+          <p class="leading-relaxed" style="color: var(--color-muted);">
+            We'd love to see you. Drop in for a coffee or get in touch about catering and events.
+          </p>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="rounded-2xl aspect-[16/9] img-warm-wash overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=900&h=500&fit=crop" alt="Sunlit cafe corner with potted plants and natural wood furniture" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ LOCATION & MAP ═════════════════════════════════════════ -->
+  <section class="bg-offwhite">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+
+        <!-- Left: Details (5 cols) -->
+        <div class="lg:col-span-5 reveal">
+          <h2 class="mb-8">Location &amp; Hours</h2>
+
+          <address class="not-italic space-y-4 mb-10">
+            <div>
+              <p class="font-medium text-charcoal">22 Market Street</p>
+              <p style="color: var(--color-muted);">Sydney NSW 2000</p>
+            </div>
+            <div class="space-y-2">
+              <p>
+                <a href="tel:0295553421" class="link-underline text-charcoal hover:text-terracotta transition-colors duration-200">
+                  02 9555 3421
+                </a>
+              </p>
+              <p>
+                <a href="mailto:hello@kinandgrain.com.au" class="link-underline text-charcoal hover:text-terracotta transition-colors duration-200">
+                  hello@kinandgrain.com.au
+                </a>
+              </p>
+            </div>
+          </address>
+
+          <div class="mb-10">
+            <p class="overline mb-3">Hours</p>
+            <dl class="space-y-3">
+              <div class="flex justify-between border-b border-charcoal/6 pb-3">
+                <dt class="font-serif">Monday – Friday</dt>
+                <dd class="tabular-nums font-medium">6:30am – 4pm</dd>
+              </div>
+              <div class="flex justify-between">
+                <dt class="font-serif">Saturday – Sunday</dt>
+                <dd class="tabular-nums font-medium">7:30am – 3pm</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div>
+            <p class="overline mb-3">How to Find Us</p>
+            <p class="text-sm leading-relaxed" style="color: var(--color-muted);">
+              We're on Market Street between Clarence and Kent, right in the heart of the CBD. Closest stations: Wynyard (5 min walk) or Town Hall (7 min walk). Street parking available on Market Street, or use the Westfield Sydney car park nearby.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Map (7 cols) -->
+        <div class="lg:col-span-7 reveal">
+          <div class="rounded-2xl overflow-hidden shadow-sm h-[400px] lg:h-full lg:min-h-[520px]">
+            <iframe
+              title="Kin & Grain location map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.8!2d151.205!3d-33.870!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3c3b3b3b3b%3A0x0!2s22+Market+St%2C+Sydney+NSW+2000!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-full"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CATERING & EVENTS FORM ═════════════════════════════════ -->
+  <section class="bg-cream">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-20 md:py-24 lg:py-[120px]">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+
+        <!-- Intro text (4 cols) -->
+        <div class="lg:col-span-4 reveal">
+          <p class="overline mb-4">Enquire Now</p>
+          <h2 class="mb-6">Catering &amp; Events</h2>
+          <p class="leading-relaxed mb-6" style="color: var(--color-muted);">
+            Planning a work function, birthday, or private event? We offer bespoke catering packages for groups of 10–100.
+          </p>
+          <div class="editorial-line"></div>
+        </div>
+
+        <!-- Form (8 cols) -->
+        <div class="lg:col-span-8 reveal">
+          <form id="catering-form" action="https://formspree.io/f/placeholder" method="POST" class="space-y-6">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 bg-offwhite border border-warm-border rounded-xl text-sm text-charcoal transition-colors duration-200"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 bg-offwhite border border-warm-border rounded-xl text-sm text-charcoal transition-colors duration-200"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="phone" class="block text-sm font-medium mb-2">Phone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="w-full px-4 py-3 bg-offwhite border border-warm-border rounded-xl text-sm text-charcoal transition-colors duration-200"
+                />
+              </div>
+              <div>
+                <label for="event-type" class="block text-sm font-medium mb-2">Event Type</label>
+                <select
+                  id="event-type"
+                  name="event_type"
+                  required
+                  class="w-full px-4 py-3 bg-offwhite border border-warm-border rounded-xl text-sm text-charcoal transition-colors duration-200 appearance-none"
+                  style="background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%232C2C2C%22 stroke-width=%222%22%3E%3Cpath d=%22M6 9l6 6 6-6%22/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 1rem center;"
+                >
+                  <option value="">Select type...</option>
+                  <option value="corporate">Corporate Catering</option>
+                  <option value="private">Private Function</option>
+                  <option value="birthday">Birthday</option>
+                  <option value="wedding">Wedding</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="guests" class="block text-sm font-medium mb-2">Estimated Guest Count</label>
+                <input
+                  type="number"
+                  id="guests"
+                  name="guest_count"
+                  min="10"
+                  max="100"
+                  placeholder="e.g. 30"
+                  class="w-full px-4 py-3 bg-offwhite border border-warm-border rounded-xl text-sm text-charcoal transition-colors duration-200"
+                />
+              </div>
+              <div>
+                <label for="date" class="block text-sm font-medium mb-2">Preferred Date</label>
+                <input
+                  type="date"
+                  id="date"
+                  name="preferred_date"
+                  class="w-full px-4 py-3 bg-offwhite border border-warm-border rounded-xl text-sm text-charcoal transition-colors duration-200"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium mb-2">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="w-full px-4 py-3 bg-offwhite border border-warm-border rounded-xl text-sm text-charcoal transition-colors duration-200 resize-y"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="inline-flex items-center px-8 py-3.5 bg-terracotta text-white text-sm font-medium tracking-[0.03em] rounded-full hover:bg-terracotta-dark transition-colors duration-200 btn-press"
+            >
+              Send Enquiry
+            </button>
+          </form>
+
+          <div id="catering-success" class="hidden py-12 text-center">
+            <span class="text-3xl mb-4 block">✦</span>
+            <h3 class="mb-3">Thank You!</h3>
+            <p style="color: var(--color-muted);">We've received your enquiry and will be in touch within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ EVENTS ═════════════════════════════════════════════════ -->
+  <section class="bg-offwhite">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-20 md:py-24 lg:py-[120px]">
+      <div class="text-center mb-14 lg:mb-20 reveal">
+        <p class="overline mb-4">Upcoming</p>
+        <h2>What's On at Kin &amp; Grain</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+        {events.map((event, i) => (
+          <article class={`bg-cream rounded-2xl p-8 lg:p-10 card-lift reveal ${i === 1 ? 'md:mt-8' : ''}`}>
+            <p class="overline mb-4">{event.date}</p>
+            <h3 class="mb-4">{event.title}</h3>
+            <p class="text-sm leading-relaxed" style="color: var(--color-muted);">
+              {event.description}
+            </p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SOCIAL CTA ═════════════════════════════════════════════ -->
+  <section class="bg-cream">
+    <div class="max-w-[680px] mx-auto px-6 md:px-8 py-16 md:py-20 lg:py-24 text-center reveal">
+      <p class="overline mb-4">On the Gram</p>
+      <h2 class="mb-6">Follow Us @kinandgrain</h2>
+      <a
+        href="https://instagram.com/kinandgrain"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-3 px-7 py-3.5 border-2 border-terracotta text-terracotta text-sm font-medium tracking-[0.03em] rounded-full hover:bg-terracotta hover:text-white transition-all duration-200 btn-press"
+      >
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+        </svg>
+        <span>Follow on Instagram</span>
+      </a>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  const form = document.getElementById('catering-form') as HTMLFormElement;
+  const success = document.getElementById('catering-success');
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    form.classList.add('hidden');
+    success?.classList.remove('hidden');
+  });
+</script>

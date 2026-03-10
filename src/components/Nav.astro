@@ -1,0 +1,120 @@
+---
+const currentPath = Astro.url.pathname;
+const isActive = (path: string) => {
+  if (path === '/') return currentPath === '/';
+  return currentPath.startsWith(path);
+};
+---
+
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-offwhite">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12">
+    <div class="flex items-center justify-between h-20 lg:h-[88px]">
+      <!-- Logo -->
+      <a href="/" class="shrink-0 group">
+        <span class="font-serif text-[1.5rem] lg:text-[1.75rem] tracking-tight text-charcoal transition-colors duration-200 group-hover:text-terracotta">
+          Kin <span class="text-terracotta">&amp;</span> Grain
+        </span>
+      </a>
+
+      <!-- Desktop links — centered -->
+      <div class="hidden md:flex items-center gap-10">
+        {[
+          { href: '/', label: 'Home' },
+          { href: '/menu', label: 'Menu' },
+          { href: '/contact', label: 'Contact' },
+        ].map(({ href, label }) => (
+          <a
+            href={href}
+            class:list={[
+              'text-[0.875rem] font-medium tracking-[0.04em] transition-colors duration-200 link-underline',
+              isActive(href) ? 'text-terracotta' : 'text-charcoal hover:text-terracotta',
+            ]}
+          >
+            {label}
+          </a>
+        ))}
+      </div>
+
+      <!-- CTA -->
+      <a
+        href="/contact"
+        class="hidden md:inline-flex items-center px-6 py-2.5 bg-terracotta text-white text-[0.8125rem] font-medium tracking-[0.03em] rounded-full hover:bg-terracotta-dark transition-colors duration-200 btn-press"
+      >
+        Visit Us
+      </a>
+
+      <!-- Mobile menu toggle -->
+      <button id="nav-toggle" class="md:hidden relative w-8 h-8 flex items-center justify-center" aria-label="Toggle menu" aria-expanded="false">
+        <span class="sr-only">Menu</span>
+        <div class="flex flex-col gap-[5px] transition-all duration-300" id="hamburger">
+          <span class="block w-5 h-[1.5px] bg-charcoal rounded-full transition-all duration-300 origin-center"></span>
+          <span class="block w-5 h-[1.5px] bg-charcoal rounded-full transition-all duration-300"></span>
+          <span class="block w-3.5 h-[1.5px] bg-charcoal rounded-full transition-all duration-300 ml-auto"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu panel -->
+  <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0 transition-[max-height] duration-300 ease-out bg-offwhite border-t border-warm-border">
+    <div class="px-6 py-8 flex flex-col gap-6">
+      {[
+        { href: '/', label: 'Home' },
+        { href: '/menu', label: 'Menu' },
+        { href: '/contact', label: 'Contact' },
+      ].map(({ href, label }) => (
+        <a
+          href={href}
+          class:list={[
+            'font-serif text-[1.25rem]',
+            isActive(href) ? 'text-terracotta' : 'text-charcoal',
+          ]}
+        >
+          {label}
+        </a>
+      ))}
+      <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 bg-terracotta text-white text-sm font-medium rounded-full hover:bg-terracotta-dark transition-colors mt-2 btn-press">
+        Visit Us
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Spacer to offset fixed nav -->
+<div class="h-20 lg:h-[88px]"></div>
+
+<script>
+  const nav = document.getElementById('main-nav')!;
+  const toggle = document.getElementById('nav-toggle')!;
+  const menu = document.getElementById('mobile-menu')!;
+  const bars = document.querySelectorAll('#hamburger span');
+
+  let menuOpen = false;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      nav.classList.add('nav-scrolled');
+    } else {
+      nav.classList.remove('nav-scrolled');
+    }
+  });
+
+  toggle.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    toggle.setAttribute('aria-expanded', String(menuOpen));
+
+    if (menuOpen) {
+      menu.style.maxHeight = menu.scrollHeight + 'px';
+      (bars[0] as HTMLElement).style.transform = 'rotate(45deg) translate(2px, 5px)';
+      (bars[1] as HTMLElement).style.opacity = '0';
+      (bars[2] as HTMLElement).style.transform = 'rotate(-45deg) translate(2px, -5px)';
+      (bars[2] as HTMLElement).style.width = '1.25rem';
+    } else {
+      menu.style.maxHeight = '0';
+      (bars[0] as HTMLElement).style.transform = '';
+      (bars[1] as HTMLElement).style.opacity = '1';
+      (bars[2] as HTMLElement).style.transform = '';
+      (bars[2] as HTMLElement).style.width = '';
+    }
+  });
+</script>
