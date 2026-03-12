@@ -154,13 +154,8 @@ const sectionDescriptions: Record<string, string> = {
       {categories.map(({ id, label, items }, catIndex) => (
         <div id={id} class={`${catIndex > 0 ? 'mt-20 lg:mt-28 pt-8' : ''}`}>
           <div class="mb-10 lg:mb-14 reveal">
-            <div class="flex items-center gap-4 mb-3">
-              <span class="font-serif text-4xl lg:text-5xl text-terracotta/10">{String(catIndex + 1).padStart(2, '0')}</span>
-              <div>
-                <p class="overline mb-1">{String(catIndex + 1).padStart(2, '0')}</p>
-                <h2>{label}</h2>
-              </div>
-            </div>
+            <p class="overline mb-3">{String(catIndex + 1).padStart(2, '0')}</p>
+            <h2>{label}</h2>
             <p class="text-sm max-w-[50ch] mt-2" style="color: var(--color-muted);">{sectionDescriptions[id]}</p>
             <div class="editorial-line mt-4"></div>
             <div class="flex items-center gap-2 mt-3 mb-6">
