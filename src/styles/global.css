@@ -3,7 +3,8 @@
 /* ── Design Tokens ──────────────────────────────────────────────
    60-30-10 palette: 60% cream/off-white, 30% charcoal, 10% terracotta
    Olive used as quiet secondary accent at ~3% frequency
-   8px grid spacing system throughout                              */
+   8px grid spacing system throughout
+   Enhanced with layering, depth, and refined typography          */
 
 @theme {
   --color-terracotta: #C4704B;
@@ -23,6 +24,7 @@
   --font-sans: 'DM Sans', system-ui, sans-serif;
 
   --ease-organic: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* ── Base ───────────────────────────────────────────────────── */
@@ -77,6 +79,45 @@ h3 {
   color: var(--color-terracotta);
 }
 
+/* ── Drop Cap — editorial first-letter treatment ─────────── */
+
+.drop-cap::first-letter {
+  font-family: var(--font-serif);
+  font-size: 3.5em;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.08em;
+  margin-top: 0.05em;
+  color: var(--color-terracotta);
+}
+
+/* ── Pull Quote — large serif statement ──────────────────── */
+
+.pull-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  font-style: italic;
+  color: var(--color-charcoal);
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--color-terracotta);
+}
+
+/* ── Display text — oversized decorative typography ──────── */
+
+.text-display {
+  font-family: var(--font-serif);
+  font-size: clamp(4rem, 3rem + 5vw, 8rem);
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+  color: var(--color-terracotta);
+  opacity: 0.06;
+  user-select: none;
+  pointer-events: none;
+}
+
 /* ── Editorial Elements ────────────────────────────────────── */
 
 .editorial-line {
@@ -104,6 +145,166 @@ h3 {
   background: linear-gradient(to left, transparent, var(--color-terracotta-light));
 }
 
+/* ── Decorative Frame — ornamental border ────────────────── */
+
+.ornate-frame {
+  position: relative;
+  border: 1px solid rgba(196, 112, 75, 0.15);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.ornate-frame::before,
+.ornate-frame::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-color: var(--color-terracotta);
+  opacity: 0.3;
+}
+
+.ornate-frame::before {
+  top: -2px;
+  left: -2px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-top-left-radius: 8px;
+}
+
+.ornate-frame::after {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  border-bottom-right-radius: 8px;
+}
+
+/* ── Layered Background Shapes ───────────────────────────── */
+
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-blob-terracotta {
+  background: radial-gradient(circle, rgba(196, 112, 75, 0.08) 0%, transparent 70%);
+}
+
+.bg-blob-olive {
+  background: radial-gradient(circle, rgba(74, 93, 58, 0.06) 0%, transparent 70%);
+}
+
+.bg-blob-cream {
+  background: radial-gradient(circle, rgba(245, 237, 227, 0.5) 0%, transparent 70%);
+}
+
+/* ── Grain Texture Overlay ───────────────────────────────── */
+
+.grain-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ── Inner Shadow / Vignette for sections ────────────────── */
+
+.section-vignette {
+  position: relative;
+}
+
+.section-vignette::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  box-shadow: inset 0 60px 80px -40px rgba(245, 237, 227, 0.6),
+              inset 0 -60px 80px -40px rgba(245, 237, 227, 0.6);
+}
+
+/* ── Layered Card with depth ─────────────────────────────── */
+
+.card-layered {
+  position: relative;
+  background: var(--color-cream);
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(44, 44, 44, 0.04),
+              0 8px 24px rgba(44, 44, 44, 0.06);
+}
+
+.card-layered::before {
+  content: '';
+  position: absolute;
+  inset: 6px 6px -6px -6px;
+  background: var(--color-terracotta);
+  opacity: 0.06;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* ── Stacked Photo Frame ─────────────────────────────────── */
+
+.photo-stack {
+  position: relative;
+}
+
+.photo-stack::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border: 1px solid rgba(196, 112, 75, 0.1);
+  border-radius: 1.25rem;
+  transform: rotate(-2deg);
+  z-index: -1;
+}
+
+.photo-stack::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border: 1px solid rgba(196, 112, 75, 0.06);
+  border-radius: 1.125rem;
+  transform: rotate(1deg);
+  z-index: -1;
+}
+
+/* ── Decorative Wheat/Grain SVG Motif ────────────────────── */
+
+.wheat-motif {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.04;
+}
+
+.wheat-motif svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Subtle line pattern background ──────────────────────── */
+
+.line-pattern {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 14px,
+    rgba(196, 112, 75, 0.03) 14px,
+    rgba(196, 112, 75, 0.03) 15px
+  );
+}
+
 /* ── Nav Glassmorphism ─────────────────────────────────────── */
 
 .nav-scrolled {
@@ -127,7 +328,7 @@ h3 {
   text-transform: uppercase;
 }
 
-/* ── Image Placeholders ────────────────────────────────────── */
+/* ── Image Treatments ─────────────────────────────────────── */
 
 .placeholder-warm {
   background: linear-gradient(145deg, #D4A574 0%, #C4704B 35%, #8B5E3C 70%, #5C3D2E 100%);
@@ -164,6 +365,23 @@ h3 {
   background: linear-gradient(to bottom, rgba(245,237,227,0.08), rgba(196,112,75,0.06));
   pointer-events: none;
   border-radius: inherit;
+}
+
+/* ── Inner glow on images for depth ──────────────────────── */
+
+.img-inner-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-inner-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow: inset 0 0 30px rgba(44, 44, 44, 0.08);
 }
 
 /* ── Hover & Micro-interactions ────────────────────────────── */
@@ -308,6 +526,29 @@ select:focus {
   opacity: 0.2;
 }
 
+/* ── Enhanced divider with more detail ───────────────────── */
+
+.warm-divider-detailed {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  padding: 6px 0;
+}
+
+.warm-divider-detailed::before,
+.warm-divider-detailed::after {
+  content: '';
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(to var(--dir, right), transparent, currentColor);
+  opacity: 0.15;
+}
+
+.warm-divider-detailed::after {
+  --dir: left;
+}
+
 /* Polaroid image frame */
 .polaroid {
   background: white;
@@ -318,6 +559,102 @@ select:focus {
 
 .polaroid:hover {
   transform: rotate(0deg) scale(1.02) !important;
+}
+
+/* ── Life at the Cafe — Proper Grid Layout ───────────────── */
+
+.cafe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .cafe-grid {
+    grid-template-columns: 1fr 1.2fr 1fr;
+    grid-template-rows: 280px 280px;
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cafe-grid {
+    grid-template-rows: 300px 300px;
+    gap: 1.25rem;
+  }
+}
+
+.cafe-grid-item {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.cafe-grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms var(--ease-organic);
+}
+
+.cafe-grid-item:hover img {
+  transform: scale(1.05);
+}
+
+.cafe-grid-tall {
+  grid-row: span 2;
+}
+
+/* ── Decorative Ring ─────────────────────────────────────── */
+
+.deco-ring {
+  position: absolute;
+  border: 1px solid rgba(196, 112, 75, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Subtle Gradient Stripe ──────────────────────────────── */
+
+.gradient-stripe {
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-terracotta) 20%,
+    var(--color-terracotta-light) 50%,
+    var(--color-terracotta) 80%,
+    transparent 100%
+  );
+  opacity: 0.15;
+}
+
+/* ── Section Transition — soft gradient fade between sections */
+
+.section-fade-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, var(--color-offwhite), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-fade-bottom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to top, var(--color-offwhite), transparent);
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* ── Reduced Motion ────────────────────────────────────────── */

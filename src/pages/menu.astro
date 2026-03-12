@@ -58,6 +58,13 @@ const tagColors: Record<string, { bg: string; text: string }> = {
   GF: { bg: 'bg-[#fce8d8]', text: 'text-[#8b5c34]' },
   DF: { bg: 'bg-[#fef3e2]', text: 'text-[#7a6230]' },
 };
+
+const sectionDescriptions: Record<string, string> = {
+  breakfast: 'Start your morning right with fresh, wholesome breakfasts made from seasonal produce.',
+  lunch: 'Satisfying midday meals crafted with care and the best local ingredients.',
+  drinks: 'Single-origin specialty coffee, house-made drinks, and fresh-pressed juices.',
+  sweets: 'House-baked treats and raw desserts — the perfect pairing for your coffee.',
+};
 ---
 
 <Layout
@@ -66,16 +73,21 @@ const tagColors: Record<string, { bg: string; text: string }> = {
 >
 
   <!-- ═══ PAGE HEADER ════════════════════════════════════════════ -->
-  <section class="bg-cream">
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 pt-12 pb-10 md:pt-20 md:pb-14 lg:pt-24 lg:pb-16">
+  <section class="bg-cream relative overflow-hidden">
+    <!-- Decorative layers -->
+    <div class="bg-blob bg-blob-terracotta w-[400px] h-[400px] -top-20 -right-20 absolute"></div>
+    <div class="deco-ring w-[200px] h-[200px] bottom-10 left-[10%] absolute"></div>
+
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 pt-12 pb-10 md:pt-20 md:pb-14 lg:pt-24 lg:pb-16 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         <div class="lg:col-span-6">
           <p class="overline mb-4">Kin & Grain</p>
           <h1 class="mb-6">Our Menu</h1>
-          <p class="leading-relaxed" style="color: var(--color-muted);">
-            Fresh, seasonal, made in-house daily.
+          <p class="leading-relaxed mb-4" style="color: var(--color-muted);">
+            Fresh, seasonal, made in-house daily. Every dish tells a story of care and quality.
           </p>
-          <p class="text-sm mt-4" style="color: var(--color-muted);">
+          <div class="editorial-line mb-6"></div>
+          <p class="text-sm" style="color: var(--color-muted);">
             <span class="font-medium text-charcoal">Dietary tags:</span>
             <span class="diet-tag bg-[#fce8d8] text-[#8b5c34] ml-1">GF</span> Gluten Free ·
             <span class="diet-tag bg-[#d4e8cd] text-[#2d5016]">V</span> Vegan ·
@@ -84,8 +96,10 @@ const tagColors: Record<string, { bg: string; text: string }> = {
           </p>
         </div>
         <div class="lg:col-span-6">
-          <div class="rounded-2xl aspect-[16/9] img-warm-wash overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&h=500&fit=crop" alt="Beautifully plated brunch dishes on a sunlit cafe table" class="w-full h-full object-cover" />
+          <div class="photo-stack relative">
+            <div class="rounded-2xl aspect-[16/9] img-warm-wash img-inner-glow overflow-hidden shadow-xl shadow-charcoal/8">
+              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&h=500&fit=crop" alt="Beautifully plated brunch dishes on a sunlit cafe table" class="w-full h-full object-cover" />
+            </div>
           </div>
         </div>
       </div>
@@ -94,16 +108,12 @@ const tagColors: Record<string, { bg: string; text: string }> = {
 
 
   <!-- ═══ DAILY SPECIALS BANNER ══════════════════════════════════ -->
-  <section class="bg-gradient-to-br from-[#FDF0E6] via-[#FAE5D3] to-[#F5DABE] border-y-2 border-terracotta/20">
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-10 md:py-12">
-      <div class="relative border-2 border-dashed border-terracotta/25 rounded-2xl p-8 md:p-10 text-center">
-        <!-- Decorative corners -->
-        <span class="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-terracotta/40 rounded-tl-sm"></span>
-        <span class="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-terracotta/40 rounded-tr-sm"></span>
-        <span class="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-terracotta/40 rounded-bl-sm"></span>
-        <span class="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-terracotta/40 rounded-br-sm"></span>
+  <section class="bg-gradient-to-br from-[#FDF0E6] via-[#FAE5D3] to-[#F5DABE] border-y border-terracotta/15 relative overflow-hidden grain-overlay">
+    <div class="bg-blob bg-blob-terracotta w-[300px] h-[300px] top-0 left-0 absolute"></div>
 
-        <span class="text-terracotta text-2xl leading-none mb-3 inline-block">✦</span>
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-10 md:py-12 relative z-10">
+      <div class="ornate-frame text-center">
+        <span class="text-terracotta text-2xl leading-none mb-3 inline-block">&#10038;</span>
         <h3 class="font-serif text-2xl md:text-3xl text-charcoal mb-3">Today's Specials</h3>
         <p class="text-base md:text-lg leading-relaxed max-w-lg mx-auto mb-4" style="color: var(--color-muted);">
           Our specials change daily based on seasonal produce. Ask our team for today's offerings.
@@ -135,28 +145,39 @@ const tagColors: Record<string, { bg: string; text: string }> = {
 
 
   <!-- ═══ MENU SECTIONS ══════════════════════════════════════════ -->
-  <section class="bg-offwhite">
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24">
+  <section class="bg-offwhite relative overflow-hidden grain-overlay">
+    <div class="bg-blob bg-blob-olive w-[300px] h-[300px] top-[20%] -left-20 absolute"></div>
+    <div class="bg-blob bg-blob-terracotta w-[300px] h-[300px] bottom-[30%] -right-20 absolute"></div>
+
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24 relative z-10">
 
       {categories.map(({ id, label, items }, catIndex) => (
         <div id={id} class={`${catIndex > 0 ? 'mt-20 lg:mt-28 pt-8' : ''}`}>
           <div class="mb-10 lg:mb-14 reveal">
-            <p class="overline mb-3">{String(catIndex + 1).padStart(2, '0')}</p>
-            <h2>{label}</h2>
+            <div class="flex items-center gap-4 mb-3">
+              <span class="font-serif text-4xl lg:text-5xl text-terracotta/10">{String(catIndex + 1).padStart(2, '0')}</span>
+              <div>
+                <p class="overline mb-1">{String(catIndex + 1).padStart(2, '0')}</p>
+                <h2>{label}</h2>
+              </div>
+            </div>
+            <p class="text-sm max-w-[50ch] mt-2" style="color: var(--color-muted);">{sectionDescriptions[id]}</p>
             <div class="editorial-line mt-4"></div>
-            <div class="flex items-center justify-center gap-2 mt-2 mb-6">
-              <div class="w-6 h-px bg-amber-800/20"></div>
-              <div class="w-1.5 h-1.5 rounded-full bg-amber-800/20"></div>
-              <div class="w-6 h-px bg-amber-800/20"></div>
+            <div class="flex items-center gap-2 mt-3 mb-6">
+              <div class="w-8 h-px bg-amber-800/15"></div>
+              <div class="w-1.5 h-1.5 rounded-full bg-amber-800/15"></div>
+              <div class="w-1.5 h-1.5 rounded-full bg-terracotta/20"></div>
+              <div class="w-1.5 h-1.5 rounded-full bg-amber-800/15"></div>
+              <div class="w-8 h-px bg-amber-800/15"></div>
             </div>
           </div>
 
-          <div class="border border-amber-900/10 rounded-xl p-6 md:p-10 relative">
+          <div class="card-layered p-6 md:p-10">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-0">
             {items.map((item) => (
               <article class="group py-6 border-b border-charcoal/6 reveal">
                 <div class="flex items-start gap-4">
-                  <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 mt-0.5">
+                  <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 mt-0.5 shadow-sm img-inner-glow">
                     <img src={item.image} alt={item.imageAlt} class="w-full h-full object-cover" loading="lazy" />
                   </div>
                   <div class="flex-1 min-w-0">
@@ -196,12 +217,14 @@ const tagColors: Record<string, { bg: string; text: string }> = {
 
 
   <!-- ═══ ALLERGEN NOTICE ════════════════════════════════════════ -->
-  <section class="bg-cream">
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-12 lg:py-16">
+  <section class="bg-cream relative paper-texture">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-12 lg:py-16 relative z-10">
       <div class="max-w-[640px] mx-auto text-center reveal">
-        <p class="text-sm leading-relaxed" style="color: var(--color-muted);">
-          <span class="font-medium text-charcoal">Allergen notice:</span> Please inform our staff of any allergies or dietary requirements. We handle gluten, nuts, dairy, and other allergens in our kitchen.
-        </p>
+        <div class="ornate-frame bg-terracotta/[0.02]">
+          <p class="text-sm leading-relaxed" style="color: var(--color-muted);">
+            <span class="font-medium text-charcoal">Allergen notice:</span> Please inform our staff of any allergies or dietary requirements. We handle gluten, nuts, dairy, and other allergens in our kitchen.
+          </p>
+        </div>
       </div>
     </div>
   </section>
