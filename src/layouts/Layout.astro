@@ -21,6 +21,58 @@ const { title, description } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
+    <!-- LocalBusiness / Restaurant Schema Markup -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Kin & Grain",
+      "image": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&h=800&fit=crop",
+      "url": "https://www.kinandgrain.com.au",
+      "@id": "https://www.kinandgrain.com.au/#restaurant",
+      "telephone": "+61295553421",
+      "email": "hello@kinandgrain.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "22 Market Street",
+        "addressLocality": "Sydney",
+        "addressRegion": "NSW",
+        "postalCode": "2000",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.870,
+        "longitude": 151.205
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "06:30",
+          "closes": "16:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday", "Sunday"],
+          "opens": "07:30",
+          "closes": "15:00"
+        }
+      ],
+      "servesCuisine": ["Australian", "Brunch", "Specialty Coffee"],
+      "priceRange": "$$",
+      "menu": "https://www.kinandgrain.com.au/menu",
+      "acceptsReservations": "false",
+      "currenciesAccepted": "AUD",
+      "paymentAccepted": "Cash, Credit Card, EFTPOS",
+      "areaServed": {
+        "@type": "City",
+        "name": "Sydney"
+      },
+      "sameAs": [
+        "https://instagram.com/kinandgrain"
+      ]
+    })} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />

@@ -11,38 +11,38 @@ interface MenuItem {
 }
 
 const breakfast: MenuItem[] = [
-  { name: 'The Kin Bowl', description: 'Poached eggs, smashed avo, pickled radish, dukkah, sourdough', price: '$22', tags: ['VG'], image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&h=400&fit=crop', imageAlt: 'Breakfast bowl with poached eggs, smashed avocado and dukkah on sourdough' },
-  { name: 'Banana Buckwheat Pancakes', description: 'Maple mascarpone, fresh berries, toasted coconut', price: '$19', tags: ['VG'], image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=400&fit=crop', imageAlt: 'Fluffy pancakes stacked with fresh berries and maple syrup' },
-  { name: 'Smoked Salmon Benedict', description: 'House-cured salmon, hollandaise, wilted spinach, sourdough', price: '$24', image: 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=400&h=400&fit=crop', imageAlt: 'Eggs benedict with smoked salmon and hollandaise on sourdough' },
-  { name: 'Mushroom & Truffle Scramble', description: 'Free-range eggs, mixed mushrooms, truffle oil, ciabatta', price: '$21', tags: ['VG'], image: 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&h=400&fit=crop', imageAlt: 'Scrambled eggs with sautéed mushrooms on toasted ciabatta' },
-  { name: 'Acai Bowl', description: 'Acai blend, granola, seasonal fruit, coconut, honey', price: '$17', tags: ['GF', 'VG'], image: 'https://images.unsplash.com/photo-1590301157890-4810ed352733?w=400&h=400&fit=crop', imageAlt: 'Purple acai smoothie bowl topped with granola, berries and coconut' },
-  { name: 'Classic Big Breakfast', description: 'Eggs your way, bacon, sausage, roasted tomato, mushroom, sourdough', price: '$25', image: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=400&h=400&fit=crop', imageAlt: 'Full breakfast plate with eggs, bacon, sausage, tomato and sourdough toast' },
+  { name: 'The Kin Bowl', description: 'Silky poached eggs nestled over smashed avo, scattered with house-made dukkah and tangy pickled radish on warm crusty sourdough', price: '$22', tags: ['VG'], image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&h=400&fit=crop', imageAlt: 'Breakfast bowl with poached eggs, smashed avocado and dukkah on sourdough' },
+  { name: 'Banana Buckwheat Pancakes', description: 'Light, fluffy buckwheat stacks layered with maple mascarpone, jewel-bright seasonal berries, and toasted coconut flakes', price: '$19', tags: ['VG'], image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=400&fit=crop', imageAlt: 'Fluffy pancakes stacked with fresh berries and maple syrup' },
+  { name: 'Smoked Salmon Benedict', description: 'Buttery house-cured salmon draped over soft poached eggs, finished with velvety hollandaise and wilted baby spinach on toasted sourdough', price: '$24', image: 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=400&h=400&fit=crop', imageAlt: 'Eggs benedict with smoked salmon and hollandaise on sourdough' },
+  { name: 'Mushroom & Truffle Scramble', description: 'Clouds of creamy free-range scrambled eggs folded through earthy sauteed mushrooms, finished with a fragrant drizzle of truffle oil and warm ciabatta', price: '$21', tags: ['VG'], image: 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&h=400&fit=crop', imageAlt: 'Scrambled eggs with sautéed mushrooms on toasted ciabatta' },
+  { name: 'Acai Bowl', description: 'Thick, vibrant acai blend loaded with crunchy house granola, seasonal fruit, toasted coconut, and a golden drizzle of raw honey', price: '$17', tags: ['GF', 'VG'], image: 'https://images.unsplash.com/photo-1590301157890-4810ed352733?w=400&h=400&fit=crop', imageAlt: 'Purple acai smoothie bowl topped with granola, berries and coconut' },
+  { name: 'The Full Kin Breakfast', description: 'Your eggs done your way alongside crispy bacon, juicy pork sausage, slow-roasted tomato, garlic mushrooms, and thick-cut sourdough', price: '$25', image: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=400&h=400&fit=crop', imageAlt: 'Full breakfast plate with eggs, bacon, sausage, tomato and sourdough toast' },
 ];
 
 const lunch: MenuItem[] = [
-  { name: 'Grain Bowl', description: 'Quinoa, roasted sweet potato, tahini, mixed greens, pepitas, feta', price: '$19', tags: ['VG', 'GF'], image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=400&fit=crop', imageAlt: 'Colorful grain bowl with quinoa, roasted sweet potato and fresh greens' },
-  { name: 'Grilled Chicken Burger', description: 'Herb-marinated chicken, slaw, aioli, brioche bun, hand-cut chips', price: '$22', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop', imageAlt: 'Grilled chicken burger with slaw on a brioche bun with chips' },
-  { name: 'Crispy Cauliflower Tacos', description: 'Chipotle crema, pickled onion, coriander, corn tortillas', price: '$18', tags: ['V', 'GF'], image: 'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400&h=400&fit=crop', imageAlt: 'Crispy cauliflower tacos with pickled onion and crema on corn tortillas' },
-  { name: 'Steak Sandwich', description: 'Scotch fillet, caramelised onion, rocket, tomato relish, Turkish bread', price: '$24', image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=400&fit=crop', imageAlt: 'Steak sandwich with caramelised onion and rocket on Turkish bread' },
-  { name: 'Caesar Salad', description: 'Cos lettuce, house croutons, parmesan, anchovy dressing, soft egg', price: '$18', image: 'https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=400&h=400&fit=crop', imageAlt: 'Classic caesar salad with croutons, parmesan shavings and a soft egg' },
+  { name: 'Grain Bowl', description: 'Warm quinoa tossed with honey-roasted sweet potato, drizzled in creamy tahini, topped with pepitas, crumbled feta, and crisp mixed greens', price: '$19', tags: ['VG', 'GF'], image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=400&fit=crop', imageAlt: 'Colorful grain bowl with quinoa, roasted sweet potato and fresh greens' },
+  { name: 'Grilled Chicken Burger', description: 'Tender herb-marinated chicken with crunchy slaw and garlicky aioli on a golden brioche bun, served with hand-cut chips', price: '$22', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop', imageAlt: 'Grilled chicken burger with slaw on a brioche bun with chips' },
+  { name: 'Crispy Cauliflower Tacos', description: 'Golden crispy cauliflower tucked into warm corn tortillas with smoky chipotle crema, tangy pickled onion, and fresh coriander', price: '$18', tags: ['V', 'GF'], image: 'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400&h=400&fit=crop', imageAlt: 'Crispy cauliflower tacos with pickled onion and crema on corn tortillas' },
+  { name: 'Steak Sandwich', description: 'Juicy scotch fillet with sweet caramelised onion, peppery rocket, and tangy tomato relish piled onto warm Turkish bread', price: '$24', image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=400&fit=crop', imageAlt: 'Steak sandwich with caramelised onion and rocket on Turkish bread' },
+  { name: 'Caesar Salad', description: 'Crisp cos lettuce, golden house croutons, shaved parmesan, and a silky anchovy dressing crowned with a soft-centred egg', price: '$18', image: 'https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=400&h=400&fit=crop', imageAlt: 'Classic caesar salad with croutons, parmesan shavings and a soft egg' },
 ];
 
 const drinks: MenuItem[] = [
   { name: 'Espresso / Long Black', price: '$4.5', image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=400&h=400&fit=crop', imageAlt: 'Espresso shot in a small white ceramic cup' },
   { name: 'Flat White / Latte / Cappuccino', price: '$5.5', image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&h=400&fit=crop', imageAlt: 'Latte with delicate rosetta latte art in a ceramic cup' },
   { name: 'Single Origin Pour Over', price: '$7', image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=400&h=400&fit=crop', imageAlt: 'Pour-over coffee being brewed through a ceramic dripper' },
-  { name: 'Matcha Latte', description: 'Organic ceremonial grade, oat milk', price: '$6.5', image: 'https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=400&h=400&fit=crop', imageAlt: 'Vibrant green matcha latte in a ceramic cup with latte art' },
-  { name: 'Fresh Juice', description: 'Orange / Apple / Watermelon', price: '$8', image: 'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=400&h=400&fit=crop', imageAlt: 'Fresh cold-pressed juices in glass bottles' },
-  { name: 'Iced Coffee', description: 'Double shot, milk, ice, vanilla', price: '$7', image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=400&fit=crop', imageAlt: 'Iced coffee with milk swirling in a tall glass' },
-  { name: 'Chai Latte', description: 'House-spiced blend, honey', price: '$6', image: 'https://images.unsplash.com/photo-1557006021-b85faa2bc5e2?w=400&h=400&fit=crop', imageAlt: 'Warm chai latte with cinnamon dusting in a ceramic mug' },
+  { name: 'Matcha Latte', description: 'Smooth organic ceremonial-grade matcha whisked with creamy oat milk', price: '$6.5', image: 'https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=400&h=400&fit=crop', imageAlt: 'Vibrant green matcha latte in a ceramic cup with latte art' },
+  { name: 'Fresh Juice', description: 'Cold-pressed to order — Orange, Apple, or Watermelon', price: '$8', image: 'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=400&h=400&fit=crop', imageAlt: 'Fresh cold-pressed juices in glass bottles' },
+  { name: 'Iced Coffee', description: 'Bold double shot poured over ice with milk and a hint of vanilla', price: '$7', image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=400&fit=crop', imageAlt: 'Iced coffee with milk swirling in a tall glass' },
+  { name: 'Chai Latte', description: 'Warming house-spiced blend sweetened with honey — your cosy afternoon pick-me-up', price: '$6', image: 'https://images.unsplash.com/photo-1557006021-b85faa2bc5e2?w=400&h=400&fit=crop', imageAlt: 'Warm chai latte with cinnamon dusting in a ceramic mug' },
 ];
 
 const sweets: MenuItem[] = [
-  { name: 'Banana Bread', description: 'House-baked, served warm with butter', price: '$7', tags: ['VG'], image: 'https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=400&h=400&fit=crop', imageAlt: 'Sliced banana bread with butter on a wooden board' },
-  { name: 'Croissant', description: 'Classic butter or almond', price: '$6.5 / $7.5', image: 'https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?w=400&h=400&fit=crop', imageAlt: 'Flaky golden croissant on a plate' },
-  { name: 'Blueberry Muffin', price: '$6', tags: ['VG'], image: 'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=400&h=400&fit=crop', imageAlt: 'Fresh blueberry muffin with a golden crumb top' },
-  { name: 'Raw Caramel Slice', description: 'Dates, cashew, cacao, coconut', price: '$8', tags: ['V', 'GF', 'DF'], image: 'https://images.unsplash.com/photo-1604152135912-04a022e23696?w=400&h=400&fit=crop', imageAlt: 'Raw caramel slice with layers of dates, cashew and cacao' },
-  { name: 'Cookie', description: 'Choc chip or peanut butter', price: '$5', image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=400&fit=crop', imageAlt: 'Freshly baked chocolate chip cookies on parchment paper' },
+  { name: 'Banana Bread', description: 'House-baked and served warm with a generous pat of melting butter — the perfect coffee companion', price: '$7', tags: ['VG'], image: 'https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=400&h=400&fit=crop', imageAlt: 'Sliced banana bread with butter on a wooden board' },
+  { name: 'Croissant', description: 'Shatteringly flaky — choose classic butter or rich almond frangipane', price: '$6.5 / $7.5', image: 'https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?w=400&h=400&fit=crop', imageAlt: 'Flaky golden croissant on a plate' },
+  { name: 'Blueberry Muffin', description: 'Bursting with juicy blueberries under a golden crumble top, baked fresh each morning', price: '$6', tags: ['VG'], image: 'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=400&h=400&fit=crop', imageAlt: 'Fresh blueberry muffin with a golden crumb top' },
+  { name: 'Raw Caramel Slice', description: 'A rich, fudgy layer of dates and cashew butter on a coconut base, finished with silky cacao', price: '$8', tags: ['V', 'GF', 'DF'], image: 'https://images.unsplash.com/photo-1604152135912-04a022e23696?w=400&h=400&fit=crop', imageAlt: 'Raw caramel slice with layers of dates, cashew and cacao' },
+  { name: 'Cookie', description: 'Warm, chewy, and generously loaded — choose choc chip or peanut butter', price: '$5', image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=400&fit=crop', imageAlt: 'Freshly baked chocolate chip cookies on parchment paper' },
 ];
 
 const categories = [
@@ -60,16 +60,16 @@ const tagColors: Record<string, { bg: string; text: string }> = {
 };
 
 const sectionDescriptions: Record<string, string> = {
-  breakfast: 'Start your morning right with fresh, wholesome breakfasts made from seasonal produce.',
-  lunch: 'Satisfying midday meals crafted with care and the best local ingredients.',
-  drinks: 'Single-origin specialty coffee, house-made drinks, and fresh-pressed juices.',
-  sweets: 'House-baked treats and raw desserts — the perfect pairing for your coffee.',
+  breakfast: 'Wake up to something worth getting out of bed for — fresh, seasonal plates made from scratch every morning.',
+  lunch: 'Fuel your afternoon with satisfying midday meals crafted from the best local ingredients.',
+  drinks: 'From your first flat white to a slow afternoon pour-over — single-origin beans and house-made drinks brewed with care.',
+  sweets: 'Treat yourself to house-baked goodies and raw desserts — the perfect companion to your coffee.',
 };
 ---
 
 <Layout
-  title="Menu — Kin & Grain | Specialty Coffee & Wholesome Food"
-  description="Explore the Kin & Grain menu. Fresh breakfast, wholesome lunch, specialty coffee, and house-baked sweet treats. Made in-house daily with seasonal produce."
+  title="Brunch & Coffee Menu | Kin & Grain Cafe Sydney CBD"
+  description="Explore our seasonal brunch, lunch, specialty coffee, and house-baked treats — all made fresh daily. See prices, dietary options, and daily specials near Wynyard."
 >
 
   <!-- ═══ PAGE HEADER ════════════════════════════════════════════ -->
@@ -81,9 +81,9 @@ const sectionDescriptions: Record<string, string> = {
     <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 pt-12 pb-10 md:pt-20 md:pb-14 lg:pt-24 lg:pb-16 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         <div class="lg:col-span-6">
-          <h1 class="mb-6">Our Menu</h1>
+          <h1 class="mb-6">Brunch, Lunch &amp; Coffee — Made Fresh for You</h1>
           <p class="leading-relaxed mb-4" style="color: var(--color-muted);">
-            Fresh, seasonal, made in-house daily. Every dish tells a story of care and quality.
+            Everything on your plate is seasonal, scratch-made, and served with care. Explore what's waiting for you today.
           </p>
           <div class="editorial-line mb-6"></div>
           <p class="text-sm" style="color: var(--color-muted);">
@@ -115,7 +115,7 @@ const sectionDescriptions: Record<string, string> = {
         <span class="text-terracotta text-2xl leading-none mb-3 inline-block">&#10038;</span>
         <h3 class="font-serif text-2xl md:text-3xl text-charcoal mb-3">Today's Specials</h3>
         <p class="text-base md:text-lg leading-relaxed max-w-lg mx-auto mb-4" style="color: var(--color-muted);">
-          Our specials change daily based on seasonal produce. Ask our team for today's offerings.
+          Our specials change daily based on what's freshest from our local suppliers. Ask your server what's on today — you won't want to miss it.
         </p>
         <p class="text-sm font-medium text-terracotta tracking-wide">
           Updated daily — follow <span class="font-semibold">@kinandgrain</span> for today's specials
@@ -207,7 +207,7 @@ const sectionDescriptions: Record<string, string> = {
       <div class="max-w-[640px] mx-auto text-center reveal">
         <div class="ornate-frame bg-terracotta/[0.02]">
           <p class="text-sm leading-relaxed" style="color: var(--color-muted);">
-            <span class="font-medium text-charcoal">Allergen notice:</span> Please inform our staff of any allergies or dietary requirements. We handle gluten, nuts, dairy, and other allergens in our kitchen.
+            <span class="font-medium text-charcoal">Allergen notice:</span> Your safety matters to us. Please let our team know about any allergies or dietary needs — we handle gluten, nuts, dairy, and other allergens in our kitchen and are happy to accommodate you.
           </p>
         </div>
       </div>
