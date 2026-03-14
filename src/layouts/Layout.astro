@@ -99,5 +99,11 @@ const { title, description } = Astro.props;
       );
       document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
     </script>
+    <script>
+      if (new URLSearchParams(window.location.search).has('preview')) {
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => img.loading = 'eager');
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+      }
+    </script>
   </body>
 </html>
