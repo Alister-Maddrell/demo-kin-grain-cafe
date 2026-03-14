@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kingraincafe.com.au/sitemap.xml
