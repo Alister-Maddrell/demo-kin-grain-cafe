@@ -29,23 +29,23 @@ const events = [
 >
 
   <!-- ═══ PAGE HEADER ════════════════════════════════════════════ -->
-  <section class="bg-cream relative overflow-hidden">
-    <div class="bg-blob bg-blob-terracotta w-[400px] h-[400px] -top-20 -right-20 absolute"></div>
-    <div class="deco-ring w-[250px] h-[250px] bottom-0 left-[5%] absolute"></div>
+  <section class="relative overflow-hidden" style="background-color: var(--color-cream);">
+    <div class="paper-texture absolute inset-0"></div>
 
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 pt-12 pb-10 md:pt-20 md:pb-14 lg:pt-24 lg:pb-16 relative z-10">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12 pt-16 pb-12 md:pt-24 md:pb-16 lg:pt-28 lg:pb-20 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         <div class="lg:col-span-6">
+          <p class="overline mb-4">Get in Touch</p>
           <h1 class="mb-6">Come Say Hello — We'd Love to See You</h1>
           <p class="leading-relaxed mb-4" style="color: var(--color-muted);">
             Whether you're popping in for your morning flat white or planning a catered event, your table is waiting. Drop by or get in touch below.
           </p>
-          <div class="editorial-line"></div>
+          <div class="brush-stroke"></div>
         </div>
         <div class="lg:col-span-6">
-          <div class="photo-stack relative">
-            <div class="rounded-2xl aspect-[16/9] img-warm-wash img-inner-glow overflow-hidden shadow-xl shadow-charcoal/8">
-              <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=900&h=500&fit=crop" alt="Sunlit cafe corner with potted plants and natural wood furniture" class="w-full h-full object-cover" />
+          <div class="relative">
+            <div class="rounded-lg overflow-hidden img-editorial shadow-lg shadow-ink/6">
+              <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=900&h=500&fit=crop" alt="Sunlit cafe corner with potted plants and natural wood furniture" class="w-full aspect-[16/9] object-cover img-sepia" />
             </div>
           </div>
         </div>
@@ -55,32 +55,33 @@ const events = [
 
 
   <!-- ═══ LOCATION & MAP ═════════════════════════════════════════ -->
-  <section class="bg-offwhite relative overflow-hidden grain-overlay">
-    <div class="bg-blob bg-blob-olive w-[350px] h-[350px] top-20 -left-20 absolute"></div>
+  <section class="relative overflow-hidden" style="background-color: var(--color-stone);">
+    <div class="grain-overlay absolute inset-0"></div>
 
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24 relative z-10">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
 
         <!-- Left: Details (5 cols) -->
         <div class="lg:col-span-5 reveal">
+          <p class="overline mb-3">Find Us</p>
           <h2 class="mb-8">Find Us &amp; Plan Your Visit</h2>
 
           <address class="not-italic space-y-4 mb-10">
             <div class="flex items-start gap-3">
               <svg class="w-5 h-5 text-terracotta shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
               <div>
-                <p class="font-medium text-charcoal">22 Market Street</p>
+                <p class="font-medium" style="color: var(--color-ink);">22 Market Street</p>
                 <p style="color: var(--color-muted);">Sydney NSW 2000</p>
               </div>
             </div>
             <div class="space-y-2 pl-8">
               <p>
-                <a href="tel:0295553421" class="link-underline text-charcoal hover:text-terracotta transition-colors duration-200">
+                <a href="tel:0295553421" class="link-underline hover:text-terracotta transition-colors duration-300" style="color: var(--color-ink);">
                   02 9555 3421
                 </a>
               </p>
               <p>
-                <a href="mailto:hello@kinandgrain.com.au" class="link-underline text-charcoal hover:text-terracotta transition-colors duration-200">
+                <a href="mailto:hello@kinandgrain.com.au" class="link-underline hover:text-terracotta transition-colors duration-300" style="color: var(--color-ink);">
                   hello@kinandgrain.com.au
                 </a>
               </p>
@@ -90,7 +91,7 @@ const events = [
           <div class="mb-10">
             <h3 class="mb-3">Hours</h3>
             <dl class="space-y-3">
-              <div class="flex justify-between border-b border-charcoal/6 pb-3">
+              <div class="flex justify-between border-b pb-3" style="border-color: var(--color-warm-border);">
                 <dt class="font-serif">Monday – Friday</dt>
                 <dd class="tabular-nums font-medium">6:30am – 4pm</dd>
               </div>
@@ -122,7 +123,7 @@ const events = [
 
         <!-- Right: Map (7 cols) -->
         <div class="lg:col-span-7 reveal">
-          <div class="rounded-2xl overflow-hidden shadow-lg h-[400px] lg:h-full lg:min-h-[520px] border border-warm-border">
+          <div class="rounded-lg overflow-hidden shadow-lg h-[400px] lg:h-full lg:min-h-[520px] border" style="border-color: var(--color-warm-border);">
             <iframe
               title="Kin & Grain location map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.8!2d151.205!3d-33.870!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3c3b3b3b3b%3A0x0!2s22+Market+St%2C+Sydney+NSW+2000!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau"
@@ -142,33 +143,33 @@ const events = [
 
 
   <!-- ═══ CATERING & EVENTS FORM ═════════════════════════════════ -->
-  <section class="bg-cream relative paper-texture overflow-hidden">
-    <div class="bg-blob bg-blob-terracotta w-[500px] h-[500px] -bottom-40 -right-40 absolute"></div>
-    <div class="deco-ring w-[300px] h-[300px] top-20 -left-20 absolute"></div>
+  <section class="relative overflow-hidden" style="background-color: var(--color-cream);">
+    <div class="paper-texture absolute inset-0"></div>
 
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-20 md:py-24 lg:py-[120px] relative z-10">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12 py-20 md:py-24 lg:py-[120px] relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
 
         <!-- Intro text (4 cols) -->
         <div class="lg:col-span-4 reveal">
+          <p class="overline mb-3">Catering</p>
           <h2 class="mb-6">Let Us Cater Your Next Event</h2>
           <p class="leading-relaxed mb-6" style="color: var(--color-muted);">
             Planning a work function, birthday, or private celebration? Let us take the stress off your plate with bespoke catering packages for groups of 10 to 100.
           </p>
-          <div class="editorial-line mb-8"></div>
+          <div class="brush-stroke mb-8"></div>
 
           <!-- Trust signals -->
           <div class="space-y-4">
             <div class="flex items-start gap-3">
-              <span class="text-terracotta text-lg">&#10038;</span>
+              <span class="text-terracotta text-sm mt-0.5">&#9679;</span>
               <p class="text-sm" style="color: var(--color-muted);">Menus tailored to your occasion and taste</p>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-terracotta text-lg">&#10038;</span>
+              <span class="text-terracotta text-sm mt-0.5">&#9679;</span>
               <p class="text-sm" style="color: var(--color-muted);">Full dietary accommodations — just let us know</p>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-terracotta text-lg">&#10038;</span>
+              <span class="text-terracotta text-sm mt-0.5">&#9679;</span>
               <p class="text-sm" style="color: var(--color-muted);">You'll hear back from us within 24 hours</p>
             </div>
           </div>
@@ -176,7 +177,7 @@ const events = [
 
         <!-- Form (8 cols) -->
         <div class="lg:col-span-8 reveal">
-          <div class="card-layered p-6 md:p-10">
+          <div class="card-warm p-6 md:p-10">
             <form id="catering-form" action="https://formspree.io/f/placeholder" method="POST" class="space-y-6">
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -187,7 +188,8 @@ const events = [
                     id="name"
                     name="name"
                     required
-                    class="w-full px-4 py-3 bg-offwhite border border-warm-border rounded-xl text-sm text-charcoal transition-colors duration-200"
+                    class="w-full px-4 py-3 border rounded-[10px] text-sm transition-colors duration-300"
+                    style="background-color: var(--color-stone); border-color: var(--color-warm-border); color: var(--color-ink);"
                   />
                 </div>
                 <div>
@@ -197,7 +199,8 @@ const events = [
                     id="email"
                     name="email"
                     required
-                    class="w-full px-4 py-3 bg-offwhite border border-warm-border rounded-xl text-sm text-charcoal transition-colors duration-200"
+                    class="w-full px-4 py-3 border rounded-[10px] text-sm transition-colors duration-300"
+                    style="background-color: var(--color-stone); border-color: var(--color-warm-border); color: var(--color-ink);"
                   />
                 </div>
               </div>
@@ -209,7 +212,8 @@ const events = [
                     type="tel"
                     id="phone"
                     name="phone"
-                    class="w-full px-4 py-3 bg-offwhite border border-warm-border rounded-xl text-sm text-charcoal transition-colors duration-200"
+                    class="w-full px-4 py-3 border rounded-[10px] text-sm transition-colors duration-300"
+                    style="background-color: var(--color-stone); border-color: var(--color-warm-border); color: var(--color-ink);"
                   />
                 </div>
                 <div>
@@ -218,8 +222,8 @@ const events = [
                     id="event-type"
                     name="event_type"
                     required
-                    class="w-full px-4 py-3 bg-offwhite border border-warm-border rounded-xl text-sm text-charcoal transition-colors duration-200 appearance-none"
-                    style="background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%232C2C2C%22 stroke-width=%222%22%3E%3Cpath d=%22M6 9l6 6 6-6%22/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 1rem center;"
+                    class="w-full px-4 py-3 border rounded-[10px] text-sm transition-colors duration-300 appearance-none"
+                    style="background-color: var(--color-stone); border-color: var(--color-warm-border); color: var(--color-ink); background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%232C2825%22 stroke-width=%222%22%3E%3Cpath d=%22M6 9l6 6 6-6%22/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 1rem center;"
                   >
                     <option value="">Select type...</option>
                     <option value="corporate">Corporate Catering</option>
@@ -241,7 +245,8 @@ const events = [
                     min="10"
                     max="100"
                     placeholder="e.g. 30"
-                    class="w-full px-4 py-3 bg-offwhite border border-warm-border rounded-xl text-sm text-charcoal transition-colors duration-200"
+                    class="w-full px-4 py-3 border rounded-[10px] text-sm transition-colors duration-300"
+                    style="background-color: var(--color-stone); border-color: var(--color-warm-border); color: var(--color-ink);"
                   />
                 </div>
                 <div>
@@ -250,7 +255,8 @@ const events = [
                     type="date"
                     id="date"
                     name="preferred_date"
-                    class="w-full px-4 py-3 bg-offwhite border border-warm-border rounded-xl text-sm text-charcoal transition-colors duration-200"
+                    class="w-full px-4 py-3 border rounded-[10px] text-sm transition-colors duration-300"
+                    style="background-color: var(--color-stone); border-color: var(--color-warm-border); color: var(--color-ink);"
                   />
                 </div>
               </div>
@@ -261,20 +267,18 @@ const events = [
                   id="message"
                   name="message"
                   rows="4"
-                  class="w-full px-4 py-3 bg-offwhite border border-warm-border rounded-xl text-sm text-charcoal transition-colors duration-200 resize-y"
+                  class="w-full px-4 py-3 border rounded-[10px] text-sm transition-colors duration-300 resize-y"
+                  style="background-color: var(--color-stone); border-color: var(--color-warm-border); color: var(--color-ink);"
                 ></textarea>
               </div>
 
-              <button
-                type="submit"
-                class="inline-flex items-center px-8 py-3.5 bg-terracotta text-white text-sm font-medium tracking-[0.03em] rounded-full hover:bg-terracotta-dark transition-colors duration-200 btn-press shadow-lg shadow-terracotta/20"
-              >
+              <button type="submit" class="btn-primary">
                 Send Your Enquiry
               </button>
             </form>
 
             <div id="catering-success" class="hidden py-12 text-center">
-              <span class="text-3xl mb-4 block">&#10038;</span>
+              <div class="brush-stroke mx-auto mb-6"></div>
               <h3 class="mb-3">Thank You!</h3>
               <p style="color: var(--color-muted);">We've received your enquiry and will be in touch within 24 hours. We're looking forward to making your event special.</p>
             </div>
@@ -286,21 +290,21 @@ const events = [
 
 
   <!-- ═══ EVENTS ═════════════════════════════════════════════════ -->
-  <section class="bg-offwhite relative overflow-hidden grain-overlay">
-    <div class="bg-blob bg-blob-olive w-[350px] h-[350px] -bottom-20 -left-20 absolute"></div>
-    <div class="deco-ring w-[200px] h-[200px] top-10 right-[10%] absolute"></div>
+  <section class="relative overflow-hidden" style="background-color: var(--color-stone);">
+    <div class="grain-overlay absolute inset-0"></div>
 
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-20 md:py-24 lg:py-[120px] relative z-10">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12 py-20 md:py-24 lg:py-[120px] relative z-10">
       <div class="text-center mb-14 lg:mb-20 reveal">
+        <p class="overline mb-4">What's On</p>
         <h2 class="mb-3">Upcoming Events You Won't Want to Miss</h2>
         <p class="max-w-[40ch] mx-auto text-sm" style="color: var(--color-muted);">Community, culture, and great coffee — there's always a reason to stop by.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
         {events.map((event, i) => (
-          <article class={`card-layered p-8 lg:p-10 card-lift reveal stagger-${i + 1} ${i === 1 ? 'md:mt-8' : ''}`}>
-            <span class="text-2xl mb-4 block text-terracotta/60">{event.icon}</span>
-            <p class="text-sm font-medium text-terracotta tracking-wide mb-4">{event.date}</p>
+          <article class={`card-warm p-8 lg:p-10 card-lift reveal stagger-${i + 1} ${i === 1 ? 'md:mt-8' : ''}`}>
+            <span class="text-2xl mb-4 block text-terracotta/50">{event.icon}</span>
+            <p class="overline mb-4">{event.date}</p>
             <h3 class="mb-4">{event.title}</h3>
             <p class="text-sm leading-relaxed" style="color: var(--color-muted);">
               {event.description}
@@ -313,17 +317,18 @@ const events = [
 
 
   <!-- ═══ SOCIAL CTA ═════════════════════════════════════════════ -->
-  <section class="bg-cream relative paper-texture overflow-hidden">
-    <div class="bg-blob bg-blob-terracotta w-[400px] h-[400px] top-0 left-[40%] absolute"></div>
+  <section class="relative overflow-hidden" style="background-color: var(--color-cream);">
+    <div class="paper-texture absolute inset-0"></div>
 
-    <div class="max-w-[680px] mx-auto px-6 md:px-8 py-16 md:py-20 lg:py-24 text-center reveal relative z-10">
+    <div class="max-w-[640px] mx-auto px-6 md:px-8 py-16 md:py-20 lg:py-24 text-center reveal relative z-10">
+      <p class="overline mb-4">Community</p>
       <h2 class="mb-3">Join the Kin &amp; Grain Community</h2>
       <p class="text-sm mb-8 font-serif italic" style="color: var(--color-muted);">Behind the counter, on your plate, and in your neighbourhood</p>
       <a
         href="https://instagram.com/kinandgrain"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-3 px-7 py-3.5 border-2 border-terracotta text-terracotta text-sm font-medium tracking-[0.03em] rounded-full hover:bg-terracotta hover:text-white transition-all duration-200 btn-press"
+        class="inline-flex items-center gap-3 btn-outline border-terracotta text-terracotta hover:bg-terracotta hover:text-white transition-all duration-300"
       >
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />

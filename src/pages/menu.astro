@@ -53,7 +53,7 @@ const categories = [
 ];
 
 const tagColors: Record<string, { bg: string; text: string }> = {
-  VG: { bg: 'bg-[#e8f0e4]', text: 'text-olive' },
+  VG: { bg: 'bg-[#e8f0e4]', text: 'text-[#4B5E3C]' },
   V:  { bg: 'bg-[#d4e8cd]', text: 'text-[#2d5016]' },
   GF: { bg: 'bg-[#fce8d8]', text: 'text-[#8b5c34]' },
   DF: { bg: 'bg-[#fef3e2]', text: 'text-[#7a6230]' },
@@ -73,31 +73,30 @@ const sectionDescriptions: Record<string, string> = {
 >
 
   <!-- ═══ PAGE HEADER ════════════════════════════════════════════ -->
-  <section class="bg-cream relative overflow-hidden">
-    <!-- Decorative layers -->
-    <div class="bg-blob bg-blob-terracotta w-[400px] h-[400px] -top-20 -right-20 absolute"></div>
-    <div class="deco-ring w-[200px] h-[200px] bottom-10 left-[10%] absolute"></div>
+  <section class="relative overflow-hidden" style="background-color: var(--color-cream);">
+    <div class="paper-texture absolute inset-0"></div>
 
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 pt-12 pb-10 md:pt-20 md:pb-14 lg:pt-24 lg:pb-16 relative z-10">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12 pt-16 pb-12 md:pt-24 md:pb-16 lg:pt-28 lg:pb-20 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         <div class="lg:col-span-6">
+          <p class="overline mb-4">Our Menu</p>
           <h1 class="mb-6">Brunch, Lunch &amp; Coffee — Made Fresh for You</h1>
           <p class="leading-relaxed mb-4" style="color: var(--color-muted);">
             Everything on your plate is seasonal, scratch-made, and served with care. Explore what's waiting for you today.
           </p>
-          <div class="editorial-line mb-6"></div>
+          <div class="brush-stroke mb-6"></div>
           <p class="text-sm" style="color: var(--color-muted);">
-            <span class="font-medium text-charcoal">Dietary tags:</span>
+            <span class="font-medium" style="color: var(--color-ink);">Dietary tags:</span>
             <span class="diet-tag bg-[#fce8d8] text-[#8b5c34] ml-1">GF</span> Gluten Free ·
             <span class="diet-tag bg-[#d4e8cd] text-[#2d5016]">V</span> Vegan ·
             <span class="diet-tag bg-[#fef3e2] text-[#7a6230]">DF</span> Dairy Free ·
-            <span class="diet-tag bg-[#e8f0e4] text-olive">VG</span> Vegetarian
+            <span class="diet-tag bg-[#e8f0e4] text-[#4B5E3C]">VG</span> Vegetarian
           </p>
         </div>
         <div class="lg:col-span-6">
-          <div class="photo-stack relative">
-            <div class="rounded-2xl aspect-[16/9] img-warm-wash img-inner-glow overflow-hidden shadow-xl shadow-charcoal/8">
-              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&h=500&fit=crop" alt="Beautifully plated brunch dishes on a sunlit cafe table" class="w-full h-full object-cover" />
+          <div class="relative">
+            <div class="rounded-lg overflow-hidden img-editorial shadow-lg shadow-ink/6">
+              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&h=500&fit=crop" alt="Beautifully plated brunch dishes on a sunlit cafe table" class="w-full aspect-[16/9] object-cover img-sepia" />
             </div>
           </div>
         </div>
@@ -107,13 +106,13 @@ const sectionDescriptions: Record<string, string> = {
 
 
   <!-- ═══ DAILY SPECIALS BANNER ══════════════════════════════════ -->
-  <section class="bg-gradient-to-br from-[#FDF0E6] via-[#FAE5D3] to-[#F5DABE] border-y border-terracotta/15 relative overflow-hidden grain-overlay">
-    <div class="bg-blob bg-blob-terracotta w-[300px] h-[300px] top-0 left-0 absolute"></div>
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #FDF0E6 0%, #FAE5D3 50%, #F5DABE 100%);">
+    <div class="grain-overlay absolute inset-0"></div>
 
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-10 md:py-12 relative z-10">
-      <div class="ornate-frame text-center">
-        <span class="text-terracotta text-2xl leading-none mb-3 inline-block">&#10038;</span>
-        <h3 class="font-serif text-2xl md:text-3xl text-charcoal mb-3">Today's Specials</h3>
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12 py-12 md:py-14 relative z-10">
+      <div class="text-center max-w-lg mx-auto">
+        <p class="overline mb-3">Daily Feature</p>
+        <h3 class="font-serif text-2xl md:text-3xl mb-3" style="color: var(--color-ink);">Today's Specials</h3>
         <p class="text-base md:text-lg leading-relaxed max-w-lg mx-auto mb-4" style="color: var(--color-muted);">
           Our specials change daily based on what's freshest from our local suppliers. Ask your server what's on today — you won't want to miss it.
         </p>
@@ -126,13 +125,13 @@ const sectionDescriptions: Record<string, string> = {
 
 
   <!-- ═══ MENU NAVIGATION ════════════════════════════════════════ -->
-  <div class="bg-offwhite sticky top-20 lg:top-[88px] z-40 border-b border-warm-border">
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12">
+  <div class="sticky top-[72px] z-40 border-b" style="background-color: var(--color-stone); border-color: var(--color-warm-border);">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12">
       <nav class="flex gap-8 overflow-x-auto" aria-label="Menu categories">
         {categories.map(({ id, label }) => (
           <a
             href={`#${id}`}
-            class="menu-tab shrink-0 py-4 text-sm font-medium tracking-[0.03em] border-b-2 border-transparent text-charcoal/60 hover:text-terracotta hover:border-terracotta/40 transition-all duration-200"
+            class="menu-tab shrink-0 py-4 text-sm font-medium tracking-[0.04em] border-b-2 border-transparent text-ink/50 hover:text-terracotta hover:border-terracotta/40 transition-all duration-300"
             data-section={id}
           >
             {label}
@@ -144,55 +143,56 @@ const sectionDescriptions: Record<string, string> = {
 
 
   <!-- ═══ MENU SECTIONS ══════════════════════════════════════════ -->
-  <section class="bg-offwhite relative overflow-hidden grain-overlay">
-    <div class="bg-blob bg-blob-olive w-[300px] h-[300px] top-[20%] -left-20 absolute"></div>
-    <div class="bg-blob bg-blob-terracotta w-[300px] h-[300px] bottom-[30%] -right-20 absolute"></div>
+  <section class="relative overflow-hidden" style="background-color: var(--color-stone);">
+    <div class="grain-overlay absolute inset-0"></div>
 
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24 relative z-10">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24 relative z-10">
 
       {categories.map(({ id, label, items }, catIndex) => (
         <div id={id} class={`${catIndex > 0 ? 'mt-20 lg:mt-28 pt-8' : ''}`}>
           <div class="mb-10 lg:mb-14 reveal">
+            <p class="overline mb-3">{String(catIndex + 1).padStart(2, '0')}</p>
             <h2>{label}</h2>
-            <p class="text-sm max-w-[50ch] mt-3 mb-6" style="color: var(--color-muted);">{sectionDescriptions[id]}</p>
+            <p class="text-sm max-w-[50ch] mt-3" style="color: var(--color-muted);">{sectionDescriptions[id]}</p>
+            <div class="brush-stroke mt-6"></div>
           </div>
 
-          <div class="card-layered p-6 md:p-10">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-0">
+          <!-- Clean horizontal menu rows -->
+          <div class="space-y-0">
             {items.map((item) => (
-              <article class="group py-6 border-b border-charcoal/6 reveal">
-                <div class="flex items-start gap-4">
-                  <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 mt-0.5 shadow-sm img-inner-glow">
-                    <img src={item.image} alt={item.imageAlt} class="w-full h-full object-cover" loading="lazy" />
+              <article class="group reveal border-b py-6 flex items-start gap-5" style="border-color: var(--color-warm-border);">
+                <!-- Thumbnail -->
+                <div class="w-14 h-14 rounded-lg overflow-hidden shrink-0 mt-0.5 img-editorial hidden sm:block">
+                  <img src={item.image} alt={item.imageAlt} class="w-full h-full object-cover img-sepia" loading="lazy" />
+                </div>
+
+                <!-- Content -->
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-baseline gap-2 flex-wrap">
+                    <h3 class="text-[1.05rem] leading-snug font-serif font-semibold group-hover:text-terracotta transition-colors duration-300">
+                      {item.name}
+                    </h3>
+                    {item.tags?.map((tag) => {
+                      const colors = tagColors[tag];
+                      return (
+                        <span class={`diet-tag ${colors?.bg} ${colors?.text}`}>
+                          {tag}
+                        </span>
+                      );
+                    })}
+                    <span class="dot-leader" style="border-color: var(--color-ink);"></span>
+                    <span class="text-terracotta font-semibold text-base shrink-0 tabular-nums font-serif">
+                      {item.price}
+                    </span>
                   </div>
-                  <div class="flex-1 min-w-0">
-                    <div class="flex items-baseline gap-0 flex-wrap">
-                      <h3 class="text-[1.125rem] leading-snug group-hover:text-terracotta transition-colors duration-200">
-                        {item.name}
-                      </h3>
-                      {item.tags?.map((tag) => {
-                        const colors = tagColors[tag];
-                        return (
-                          <span class={`diet-tag ${colors?.bg} ${colors?.text} ml-2`}>
-                            {tag}
-                          </span>
-                        );
-                      })}
-                      <span class="dot-leader border-amber-900"></span>
-                      <span class="text-terracotta font-medium text-base shrink-0 tabular-nums">
-                        {item.price}
-                      </span>
-                    </div>
-                    {item.description && (
-                      <p class="text-sm leading-relaxed mt-2" style="color: var(--color-muted);">
-                        {item.description}
-                      </p>
-                    )}
-                  </div>
+                  {item.description && (
+                    <p class="text-sm leading-relaxed mt-1.5" style="color: var(--color-muted);">
+                      {item.description}
+                    </p>
+                  )}
                 </div>
               </article>
             ))}
-          </div>
           </div>
         </div>
       ))}
@@ -202,12 +202,13 @@ const sectionDescriptions: Record<string, string> = {
 
 
   <!-- ═══ ALLERGEN NOTICE ════════════════════════════════════════ -->
-  <section class="bg-cream relative paper-texture">
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-12 lg:py-16 relative z-10">
+  <section class="relative" style="background-color: var(--color-cream);">
+    <div class="paper-texture absolute inset-0"></div>
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12 py-12 lg:py-16 relative z-10">
       <div class="max-w-[640px] mx-auto text-center reveal">
-        <div class="ornate-frame bg-terracotta/[0.02]">
+        <div class="card-hairline p-8">
           <p class="text-sm leading-relaxed" style="color: var(--color-muted);">
-            <span class="font-medium text-charcoal">Allergen notice:</span> Your safety matters to us. Please let our team know about any allergies or dietary needs — we handle gluten, nuts, dairy, and other allergens in our kitchen and are happy to accommodate you.
+            <span class="font-medium" style="color: var(--color-ink);">Allergen notice:</span> Your safety matters to us. Please let our team know about any allergies or dietary needs — we handle gluten, nuts, dairy, and other allergens in our kitchen and are happy to accommodate you.
           </p>
         </div>
       </div>
@@ -230,10 +231,10 @@ const sectionDescriptions: Record<string, string> = {
             const isActive = tab.getAttribute('data-section') === id;
             if (isActive) {
               tab.classList.add('text-terracotta', 'border-terracotta');
-              tab.classList.remove('text-charcoal/60', 'border-transparent');
+              tab.classList.remove('text-ink/50', 'border-transparent');
             } else {
               tab.classList.remove('text-terracotta', 'border-terracotta');
-              tab.classList.add('text-charcoal/60', 'border-transparent');
+              tab.classList.add('text-ink/50', 'border-transparent');
             }
           });
         }

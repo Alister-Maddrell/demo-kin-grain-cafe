@@ -8,49 +8,46 @@ import Layout from '../layouts/Layout.astro';
 >
 
   <!-- ═══ HERO ═══════════════════════════════════════════════════ -->
-  <section class="bg-offwhite relative overflow-hidden grain-overlay">
-    <!-- Decorative background layers -->
-    <div class="bg-blob bg-blob-terracotta w-[500px] h-[500px] -top-40 -right-40 absolute"></div>
-    <div class="bg-blob bg-blob-cream w-[400px] h-[400px] bottom-0 left-0 absolute"></div>
-    <div class="deco-ring w-[300px] h-[300px] -top-20 right-[15%] absolute"></div>
-    <div class="deco-ring w-[180px] h-[180px] bottom-10 left-[8%] absolute"></div>
+  <section class="relative overflow-hidden" style="background-color: var(--color-stone);">
+    <div class="grain-overlay absolute inset-0"></div>
 
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 pt-12 pb-16 md:pt-20 md:pb-24 lg:pt-[120px] lg:pb-[120px] relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12 pt-16 pb-20 md:pt-24 md:pb-32 lg:pt-[100px] lg:pb-[120px] relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
-        <!-- Text — 5 columns -->
+        <!-- Text — 5 columns, asymmetric left -->
         <div class="lg:col-span-5 order-2 lg:order-1">
-          <!-- Oversized decorative text behind -->
-          <div class="text-display absolute -left-4 -top-8 lg:-left-8 lg:-top-16 select-none" aria-hidden="true">K&G</div>
+          <p class="overline mb-6">Sydney CBD</p>
 
-          <h1 class="text-charcoal mb-6 relative">
+          <h1 class="mb-8">
             Your Morning Ritual, Perfected — Specialty Coffee &amp; Scratch-Made Brunch
           </h1>
-          <p class="leading-relaxed mb-10 max-w-[48ch] relative" style="color: var(--color-muted);">
+
+          <p class="leading-relaxed mb-10 max-w-[46ch]" style="color: var(--color-muted);">
             Walk in to the aroma of beans roasted for flavour, not volume. Settle into a seasonal plate made fresh from 12 local suppliers. This is your everyday escape in the heart of Sydney CBD.
           </p>
-          <div class="flex flex-wrap gap-4 relative">
-            <a
-              href="/menu"
-              class="inline-flex items-center px-7 py-3.5 bg-terracotta text-white text-sm font-medium tracking-[0.03em] rounded-full hover:bg-terracotta-dark transition-colors duration-200 btn-press shadow-lg shadow-terracotta/20"
-            >
+
+          <div class="flex flex-wrap gap-4">
+            <a href="/menu" class="btn-primary">
               View Our Menu
             </a>
-            <a
-              href="/contact"
-              class="inline-flex items-center px-7 py-3.5 border-2 border-charcoal/20 text-charcoal text-sm font-medium tracking-[0.03em] rounded-full hover:border-terracotta hover:text-terracotta transition-colors duration-200"
-            >
+            <a href="/contact" class="btn-outline">
               Book Catering or Visit Us
             </a>
           </div>
         </div>
 
-        <!-- Hero image — 7 columns with stacked frame -->
+        <!-- Hero image — 7 columns -->
         <div class="lg:col-span-7 order-1 lg:order-2">
-          <div class="photo-stack relative">
-            <div class="rounded-2xl aspect-[4/3] lg:aspect-[3/2] img-warm-wash img-inner-glow overflow-hidden shadow-2xl shadow-charcoal/10">
-              <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&h=800&fit=crop" alt="Cozy cafe interior with warm lighting, wooden tables and hanging plants" class="w-full h-full object-cover" />
+          <div class="relative">
+            <div class="rounded-lg overflow-hidden img-editorial shadow-2xl shadow-ink/8">
+              <img
+                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&h=800&fit=crop"
+                alt="Cozy cafe interior with warm lighting, wooden tables and hanging plants"
+                class="w-full aspect-[4/3] lg:aspect-[3/2] object-cover img-sepia"
+              />
             </div>
+            <!-- Subtle decorative offset frame -->
+            <div class="absolute -bottom-3 -right-3 w-full h-full rounded-lg border border-terracotta/10 -z-10"></div>
           </div>
         </div>
       </div>
@@ -58,39 +55,35 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
 
-  <!-- warm divider -->
-  <div class="warm-divider-detailed text-amber-800 py-3">
-    <span class="w-1.5 h-1.5 rounded-full bg-current opacity-30"></span>
-    <span class="text-xs opacity-50">&#9830;</span>
-    <span class="w-1.5 h-1.5 rounded-full bg-current opacity-30"></span>
-  </div>
-
   <!-- ═══ OUR STORY ══════════════════════════════════════════════ -->
-  <section class="bg-cream relative paper-texture overflow-hidden">
-    <!-- Layered decorative elements -->
-    <div class="bg-blob bg-blob-terracotta w-[600px] h-[600px] -bottom-60 -right-60 absolute"></div>
-    <div class="deco-ring w-[250px] h-[250px] top-20 -right-20 absolute"></div>
+  <section class="relative overflow-hidden" style="background-color: var(--color-cream);">
+    <div class="paper-texture absolute inset-0"></div>
 
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-24 md:py-32 lg:py-[140px] relative z-10">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12 py-24 md:py-32 lg:py-[130px] relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
 
-        <!-- Image — 5 columns with depth -->
+        <!-- Image — 5 columns -->
         <div class="lg:col-span-5 reveal">
-          <div class="photo-stack relative">
-            <div class="rounded-2xl aspect-[4/5] img-warm-wash img-inner-glow overflow-hidden shadow-xl shadow-charcoal/8">
-              <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&h=1000&fit=crop" alt="Barista carefully preparing a pour-over coffee behind the counter" class="w-full h-full object-cover" />
+          <div class="relative">
+            <div class="rounded-lg overflow-hidden img-editorial shadow-lg shadow-ink/6">
+              <img
+                src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&h=1000&fit=crop"
+                alt="Barista carefully preparing a pour-over coffee behind the counter"
+                class="w-full aspect-[4/5] object-cover img-sepia"
+              />
             </div>
           </div>
-          <!-- Decorative caption below image -->
+          <!-- Quiet caption below image -->
           <p class="text-center mt-6 font-serif text-sm italic" style="color: var(--color-muted);">
             "Every cup tells a story. Every plate, a labour of love."
           </p>
         </div>
 
         <!-- Text — 7 columns -->
-        <div class="lg:col-span-7 lg:pt-12 reveal">
+        <div class="lg:col-span-7 reveal">
+          <p class="overline mb-4">Our Story</p>
           <h2 class="mb-8">From Bean to Bowl — How Your Food Gets to the Table</h2>
-          <div class="max-w-[55ch]">
+          <div class="max-w-[52ch]">
             <p class="leading-relaxed mb-6 drop-cap" style="color: var(--color-muted);">
               It started in 2019 with a worn espresso machine and a handful of recipes passed down through family kitchens. Seven years on, you'll still find us on Market Street in Sydney CBD — sourcing beans directly from single-origin farms, partnering with 12 local growers, and making everything from our sourdough to our dukkah by hand.
             </p>
@@ -98,21 +91,22 @@ import Layout from '../layouts/Layout.astro';
               Whether you're a Wynyard commuter grabbing your morning flat white or lingering over a long brunch with friends, you'll taste the difference in every bite. No shortcuts, no pre-mixes — just honest food and properly brewed coffee made for you.
             </p>
           </div>
-          <div class="editorial-line mt-10"></div>
 
-          <!-- Layered detail: small stats -->
-          <div class="mt-10 flex gap-10 lg:gap-14">
+          <div class="brush-stroke mt-10"></div>
+
+          <!-- Stats -->
+          <div class="mt-10 flex gap-12 lg:gap-16">
             <div>
-              <p class="font-serif text-3xl text-terracotta mb-1">7+</p>
-              <p class="text-xs uppercase tracking-[0.1em] font-medium" style="color: var(--color-muted);">Years in Sydney CBD</p>
+              <p class="font-serif text-3xl text-terracotta font-bold mb-1">7+</p>
+              <p class="text-xs uppercase tracking-[0.12em] font-medium" style="color: var(--color-muted);">Years in Sydney CBD</p>
             </div>
             <div>
-              <p class="font-serif text-3xl text-terracotta mb-1">12</p>
-              <p class="text-xs uppercase tracking-[0.1em] font-medium" style="color: var(--color-muted);">Local Growers &amp; Suppliers</p>
+              <p class="font-serif text-3xl text-terracotta font-bold mb-1">12</p>
+              <p class="text-xs uppercase tracking-[0.12em] font-medium" style="color: var(--color-muted);">Local Growers &amp; Suppliers</p>
             </div>
             <div>
-              <p class="font-serif text-3xl text-terracotta mb-1">100%</p>
-              <p class="text-xs uppercase tracking-[0.1em] font-medium" style="color: var(--color-muted);">Made In-House</p>
+              <p class="font-serif text-3xl text-terracotta font-bold mb-1">100%</p>
+              <p class="text-xs uppercase tracking-[0.12em] font-medium" style="color: var(--color-muted);">Made In-House</p>
             </div>
           </div>
         </div>
@@ -121,21 +115,14 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
 
-  <!-- warm divider -->
-  <div class="warm-divider-detailed text-amber-800 py-3">
-    <span class="w-1.5 h-1.5 rounded-full bg-current opacity-30"></span>
-    <span class="text-xs opacity-50">&#9830;</span>
-    <span class="w-1.5 h-1.5 rounded-full bg-current opacity-30"></span>
-  </div>
-
   <!-- ═══ FEATURED MENU ══════════════════════════════════════════ -->
-  <section class="bg-offwhite relative overflow-hidden grain-overlay">
-    <div class="bg-blob bg-blob-olive w-[400px] h-[400px] top-20 -left-40 absolute"></div>
-    <div class="deco-ring w-[200px] h-[200px] bottom-40 right-[5%] absolute"></div>
+  <section class="relative overflow-hidden" style="background-color: var(--color-stone);">
+    <div class="grain-overlay absolute inset-0"></div>
 
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-24 md:py-32 lg:py-[140px] relative z-10">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12 py-24 md:py-32 lg:py-[130px] relative z-10">
 
-      <div class="text-center mb-14 lg:mb-20 reveal">
+      <div class="text-center mb-16 lg:mb-20 reveal">
+        <p class="overline mb-4">From the Kitchen</p>
         <h2 class="mb-4">Taste What Keeps Our Regulars Coming Back</h2>
         <p class="max-w-[42ch] mx-auto text-sm" style="color: var(--color-muted);">Seasonal produce, careful hands, and flavours you'll be thinking about long after your last bite.</p>
       </div>
@@ -145,26 +132,26 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Card 1 -->
         <article class="group reveal stagger-1">
-          <div class="overflow-hidden rounded-xl mb-6 img-inner-glow shadow-lg shadow-charcoal/6">
-            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&h=750&fit=crop" alt="Breakfast bowl with poached eggs, smashed avocado and fresh greens on sourdough" class="aspect-[4/5] w-full object-cover img-zoom" />
+          <div class="overflow-hidden rounded-lg mb-6 img-editorial">
+            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&h=750&fit=crop" alt="Breakfast bowl with poached eggs, smashed avocado and fresh greens on sourdough" class="aspect-[4/5] w-full object-cover img-zoom img-sepia" />
           </div>
           <div class="flex items-start justify-between gap-4 mb-2">
-            <h3 class="group-hover:text-terracotta transition-colors duration-200">The Kin Bowl</h3>
-            <span class="text-terracotta font-medium text-lg shrink-0 mt-1 tabular-nums">$22</span>
+            <h3 class="group-hover:text-terracotta transition-colors duration-300">The Kin Bowl</h3>
+            <span class="text-terracotta font-semibold text-lg shrink-0 mt-1 tabular-nums">$22</span>
           </div>
           <p class="text-sm leading-relaxed" style="color: var(--color-muted);">
             Silky poached eggs nestled over smashed avo, scattered with house-made dukkah and tangy pickled radish, all on warm crusty sourdough. One bite and you'll see why it's our most-ordered dish.
           </p>
         </article>
 
-        <!-- Card 2 — offset vertically for editorial rhythm -->
-        <article class="group md:mt-12 reveal stagger-2">
-          <div class="overflow-hidden rounded-xl mb-6 img-inner-glow shadow-lg shadow-charcoal/6">
-            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600&h=750&fit=crop" alt="Single origin pour-over coffee being brewed into a glass carafe" class="aspect-[4/5] w-full object-cover img-zoom" />
+        <!-- Card 2 — offset for editorial rhythm -->
+        <article class="group md:mt-14 reveal stagger-2">
+          <div class="overflow-hidden rounded-lg mb-6 img-editorial">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600&h=750&fit=crop" alt="Single origin pour-over coffee being brewed into a glass carafe" class="aspect-[4/5] w-full object-cover img-zoom img-sepia" />
           </div>
           <div class="flex items-start justify-between gap-4 mb-2">
-            <h3 class="group-hover:text-terracotta transition-colors duration-200">Single Origin Pour Over</h3>
-            <span class="text-terracotta font-medium text-lg shrink-0 mt-1 tabular-nums">$7</span>
+            <h3 class="group-hover:text-terracotta transition-colors duration-300">Single Origin Pour Over</h3>
+            <span class="text-terracotta font-semibold text-lg shrink-0 mt-1 tabular-nums">$7</span>
           </div>
           <p class="text-sm leading-relaxed" style="color: var(--color-muted);">
             Rotating single-origin beans from small-lot farms, brewed to order just for you. This month: Ethiopian Yirgacheffe — bright blueberry up front, velvety dark chocolate on the finish.
@@ -173,12 +160,12 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Card 3 -->
         <article class="group reveal stagger-3">
-          <div class="overflow-hidden rounded-xl mb-6 img-inner-glow shadow-lg shadow-charcoal/6">
-            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=750&fit=crop" alt="Colorful grain bowl with quinoa, roasted sweet potato and fresh vegetables" class="aspect-[4/5] w-full object-cover img-zoom" />
+          <div class="overflow-hidden rounded-lg mb-6 img-editorial">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=750&fit=crop" alt="Colorful grain bowl with quinoa, roasted sweet potato and fresh vegetables" class="aspect-[4/5] w-full object-cover img-zoom img-sepia" />
           </div>
           <div class="flex items-start justify-between gap-4 mb-2">
-            <h3 class="group-hover:text-terracotta transition-colors duration-200">Grain Bowl</h3>
-            <span class="text-terracotta font-medium text-lg shrink-0 mt-1 tabular-nums">$19</span>
+            <h3 class="group-hover:text-terracotta transition-colors duration-300">Grain Bowl</h3>
+            <span class="text-terracotta font-semibold text-lg shrink-0 mt-1 tabular-nums">$19</span>
           </div>
           <p class="text-sm leading-relaxed" style="color: var(--color-muted);">
             Warm quinoa tossed with honey-roasted sweet potato, drizzled in creamy tahini, topped with pepitas, crumbled feta, and crisp mixed greens. Hearty enough for lunch, light enough to feel great after.
@@ -186,8 +173,8 @@ import Layout from '../layouts/Layout.astro';
         </article>
       </div>
 
-      <div class="text-center mt-14 lg:mt-20">
-        <a href="/menu" class="link-underline font-medium text-charcoal hover:text-terracotta transition-colors duration-200">
+      <div class="text-center mt-16 lg:mt-20">
+        <a href="/menu" class="link-underline font-medium hover:text-terracotta transition-colors duration-300" style="color: var(--color-ink);">
           View Our Full Menu →
         </a>
       </div>
@@ -195,49 +182,37 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
 
-  <!-- warm divider -->
-  <div class="warm-divider-detailed text-amber-800 py-3">
-    <span class="w-1.5 h-1.5 rounded-full bg-current opacity-30"></span>
-    <span class="text-xs opacity-50">&#9830;</span>
-    <span class="w-1.5 h-1.5 rounded-full bg-current opacity-30"></span>
-  </div>
-
   <!-- ═══ LIFE AT THE CAFE ══════════════════════════════════════ -->
-  <section class="bg-cream relative paper-texture overflow-hidden">
-    <div class="bg-blob bg-blob-terracotta w-[500px] h-[500px] top-0 left-[50%] -translate-x-1/2 absolute"></div>
+  <section class="relative overflow-hidden" style="background-color: var(--color-cream);">
+    <div class="paper-texture absolute inset-0"></div>
 
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-24 md:py-32 lg:py-[120px] relative z-10">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12 py-24 md:py-32 lg:py-[120px] relative z-10">
 
-      <div class="text-center mb-10 lg:mb-14 reveal">
+      <div class="text-center mb-12 lg:mb-16 reveal">
+        <p class="overline mb-4">Life at the Cafe</p>
         <h2 class="mb-3">Step Inside Your New Favourite Spot</h2>
         <p class="max-w-[36ch] mx-auto text-sm font-serif italic" style="color: var(--color-muted);">Sunlit tables, the hiss of steam, and the warm smell of fresh sourdough</p>
       </div>
 
-      <!-- Fixed masonry grid — consistent, aligned layout -->
+      <!-- Photo grid -->
       <div class="cafe-grid reveal">
-        <!-- Row 1, Col 1: Square -->
-        <div class="cafe-grid-item img-warm-wash img-inner-glow shadow-md">
-          <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=600&h=600&fit=crop" alt="Customers enjoying coffee and conversation at a sunlit cafe table" />
+        <div class="cafe-grid-item img-editorial">
+          <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=600&h=600&fit=crop" alt="Customers enjoying coffee and conversation at a sunlit cafe table" class="img-sepia" />
         </div>
-        <!-- Row 1+2, Col 2: Tall (spans 2 rows) -->
-        <div class="cafe-grid-item cafe-grid-tall img-warm-wash img-inner-glow shadow-md hidden md:block">
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=1000&fit=crop" alt="Beautifully plated brunch dish with edible flowers and microgreens" />
+        <div class="cafe-grid-item cafe-grid-tall img-editorial hidden md:block">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=1000&fit=crop" alt="Beautifully plated brunch dish with edible flowers and microgreens" class="img-sepia" />
         </div>
-        <!-- Row 1, Col 3: Square -->
-        <div class="cafe-grid-item img-warm-wash img-inner-glow shadow-md">
-          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&h=600&fit=crop" alt="Latte art in a ceramic cup viewed from above" />
+        <div class="cafe-grid-item img-editorial">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&h=600&fit=crop" alt="Latte art in a ceramic cup viewed from above" class="img-sepia" />
         </div>
-        <!-- Row 2, Col 1: Square -->
-        <div class="cafe-grid-item img-warm-wash img-inner-glow shadow-md">
-          <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=600&h=600&fit=crop" alt="Fresh seasonal ingredients and herbs arranged on a wooden cutting board" />
+        <div class="cafe-grid-item img-editorial">
+          <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=600&h=600&fit=crop" alt="Fresh seasonal ingredients and herbs arranged on a wooden cutting board" class="img-sepia" />
         </div>
-        <!-- Mobile: Col 2 replacement (since tall is hidden on mobile) -->
-        <div class="cafe-grid-item img-warm-wash img-inner-glow shadow-md md:hidden">
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=600&fit=crop" alt="Beautifully plated brunch dish with edible flowers and microgreens" />
+        <div class="cafe-grid-item img-editorial md:hidden">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=600&fit=crop" alt="Beautifully plated brunch dish with edible flowers and microgreens" class="img-sepia" />
         </div>
-        <!-- Row 2, Col 3: Square -->
-        <div class="cafe-grid-item img-warm-wash img-inner-glow shadow-md hidden md:block">
-          <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&h=600&fit=crop" alt="Barista pouring steamed milk into a coffee cup behind the counter" />
+        <div class="cafe-grid-item img-editorial hidden md:block">
+          <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&h=600&fit=crop" alt="Barista pouring steamed milk into a coffee cup behind the counter" class="img-sepia" />
         </div>
       </div>
 
@@ -246,7 +221,8 @@ import Layout from '../layouts/Layout.astro';
           href="https://instagram.com/kinandgrain"
           target="_blank"
           rel="noopener noreferrer"
-          class="link-underline text-sm font-medium text-charcoal hover:text-terracotta transition-colors duration-200"
+          class="link-underline text-sm font-medium hover:text-terracotta transition-colors duration-300"
+          style="color: var(--color-ink);"
         >
           Follow Your Morning Fix on Instagram @kinandgrain →
         </a>
@@ -255,20 +231,13 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
 
-  <!-- warm divider -->
-  <div class="warm-divider-detailed text-amber-800 py-3">
-    <span class="w-1.5 h-1.5 rounded-full bg-current opacity-30"></span>
-    <span class="text-xs opacity-50">&#9830;</span>
-    <span class="w-1.5 h-1.5 rounded-full bg-current opacity-30"></span>
-  </div>
-
   <!-- ═══ EMAIL CAPTURE ══════════════════════════════════════════ -->
-  <section class="bg-offwhite relative overflow-hidden grain-overlay">
-    <div class="bg-blob bg-blob-terracotta w-[300px] h-[300px] top-0 right-0 absolute"></div>
-    <div class="bg-blob bg-blob-olive w-[250px] h-[250px] bottom-0 left-0 absolute"></div>
+  <section class="relative overflow-hidden" style="background-color: var(--color-stone);">
+    <div class="grain-overlay absolute inset-0"></div>
 
-    <div class="max-w-[680px] mx-auto px-6 md:px-8 py-24 md:py-32 lg:py-[140px] text-center relative z-10">
+    <div class="max-w-[640px] mx-auto px-6 md:px-8 py-24 md:py-32 lg:py-[130px] text-center relative z-10">
       <div class="reveal">
+        <p class="overline mb-4">Stay Connected</p>
         <h2 class="mb-4">Get a Taste Before You Visit</h2>
         <p class="text-lg font-serif italic text-terracotta mb-2">Enjoy 10% off your first visit</p>
         <p class="leading-relaxed mb-10 max-w-[50ch] mx-auto" style="color: var(--color-muted);">
@@ -283,41 +252,35 @@ import Layout from '../layouts/Layout.astro';
             name="email"
             placeholder="Your email address"
             required
-            class="flex-1 px-5 py-3.5 bg-cream border border-warm-border rounded-full text-sm text-charcoal placeholder-charcoal/35 transition-colors duration-200 shadow-sm"
+            class="flex-1 px-5 py-3.5 border border-ink/10 rounded-[12px] text-sm placeholder-ink/30 transition-colors duration-300"
+            style="background-color: var(--color-cream); color: var(--color-ink);"
           />
           <button
             type="submit"
-            class="px-7 py-3.5 bg-terracotta text-white text-sm font-medium tracking-[0.03em] rounded-full hover:bg-terracotta-dark transition-colors duration-200 btn-press shrink-0 shadow-lg shadow-terracotta/20"
+            class="btn-primary shrink-0"
           >
             Subscribe
           </button>
         </form>
-        <p id="email-capture-msg" class="hidden mt-4 text-sm text-olive font-medium">Welcome to the family! Check your inbox for your 10% off code.</p>
+        <p id="email-capture-msg" class="hidden mt-4 text-sm text-matcha font-medium">Welcome to the family! Check your inbox for your 10% off code.</p>
       </div>
     </div>
   </section>
 
 
-  <!-- warm divider -->
-  <div class="warm-divider-detailed text-amber-800 py-3">
-    <span class="w-1.5 h-1.5 rounded-full bg-current opacity-30"></span>
-    <span class="text-xs opacity-50">&#9830;</span>
-    <span class="w-1.5 h-1.5 rounded-full bg-current opacity-30"></span>
-  </div>
-
   <!-- ═══ HOURS & LOCATION TEASER ════════════════════════════════ -->
-  <section class="bg-cream relative paper-texture overflow-hidden">
-    <div class="bg-blob bg-blob-olive w-[400px] h-[400px] -bottom-40 -left-40 absolute"></div>
-    <div class="deco-ring w-[350px] h-[350px] -top-40 right-[20%] absolute"></div>
+  <section class="relative overflow-hidden" style="background-color: var(--color-cream);">
+    <div class="paper-texture absolute inset-0"></div>
 
-    <div class="max-w-[1280px] mx-auto px-6 md:px-8 lg:px-12 py-24 md:py-32 lg:py-[120px] relative z-10">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12 py-24 md:py-32 lg:py-[120px] relative z-10">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start reveal">
 
         <!-- Hours -->
         <div>
+          <p class="overline mb-4">Hours</p>
           <h2 class="mb-8">Open Early, Seven Days — Your Table is Waiting</h2>
           <dl class="space-y-4 text-lg">
-            <div class="flex justify-between items-baseline border-b border-charcoal/8 pb-4">
+            <div class="flex justify-between items-baseline border-b pb-4" style="border-color: var(--color-warm-border);">
               <dt class="font-serif">Monday – Friday</dt>
               <dd class="tabular-nums font-medium">6:30am – 4pm</dd>
             </div>
@@ -327,12 +290,12 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </dl>
 
-          <!-- Holiday Notice with ornate frame -->
-          <div class="mt-8 ornate-frame bg-terracotta/[0.04]">
+          <!-- Holiday Notice -->
+          <div class="mt-8 card-hairline p-6">
             <div class="flex items-start gap-3">
               <svg class="w-5 h-5 text-terracotta shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg>
               <div>
-                <p class="text-sm font-semibold text-charcoal mb-0.5">Easter 2026 Hours</p>
+                <p class="text-sm font-semibold mb-0.5" style="color: var(--color-ink);">Easter 2026 Hours</p>
                 <p class="text-sm leading-relaxed" style="color: var(--color-muted);">We'll be closed Good Friday (3 April) and Easter Saturday. Back to normal hours from Easter Sunday — we can't wait to see you.</p>
               </div>
             </div>
@@ -341,14 +304,15 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Location -->
         <div class="md:pt-4">
+          <p class="overline mb-4">Location</p>
           <h3 class="mb-4">22 Market Street</h3>
           <p class="mb-2" style="color: var(--color-muted);">Sydney NSW 2000</p>
           <p class="mb-8" style="color: var(--color-muted);">
             Between Clarence &amp; Kent Streets — a 5-minute walk from Wynyard Station or 7 minutes from Town Hall.
           </p>
 
-          <!-- Small inline map preview -->
-          <div class="rounded-xl overflow-hidden shadow-md mb-8 aspect-[16/9] bg-cream border border-warm-border">
+          <!-- Map -->
+          <div class="rounded-lg overflow-hidden shadow-md mb-8 aspect-[16/9] border" style="background-color: var(--color-cream); border-color: var(--color-warm-border);">
             <iframe
               title="Kin & Grain location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.8!2d151.205!3d-33.870!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3c3b3b3b3b%3A0x0!2s22+Market+St%2C+Sydney+NSW+2000!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau"
@@ -363,7 +327,7 @@ import Layout from '../layouts/Layout.astro';
 
           <a
             href="/contact"
-            class="inline-flex items-center px-7 py-3 border-2 border-terracotta text-terracotta text-sm font-medium tracking-[0.03em] rounded-full hover:bg-terracotta hover:text-white transition-all duration-200 btn-press"
+            class="btn-outline border-terracotta text-terracotta hover:bg-terracotta hover:text-white transition-all duration-300"
           >
             Get Directions &amp; Plan Your Visit
           </a>
