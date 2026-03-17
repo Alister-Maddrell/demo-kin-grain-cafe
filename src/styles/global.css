@@ -6,18 +6,18 @@
    Slow organic animations, editorial asymmetry, paper textures */
 
 @theme {
-  --color-terracotta: #C4704B;
-  --color-terracotta-dark: #A85D3B;
-  --color-terracotta-light: #D4896A;
+  --color-terracotta: #B8654A;
+  --color-terracotta-dark: #9A5236;
+  --color-terracotta-light: #D0886C;
   --color-matcha: #4B5E3C;
   --color-matcha-dark: #3A4A2F;
   --color-matcha-light: #6B7F5A;
-  --color-stone: #F2EDE6;
-  --color-cream: #FFF8F0;
-  --color-ink: #2C2825;
-  --color-ink-light: #4A4540;
-  --color-warm-border: rgba(44, 40, 37, 0.08);
-  --color-muted: rgba(44, 40, 37, 0.62);
+  --color-stone: #EEE8E0;
+  --color-cream: #FBF5ED;
+  --color-ink: #26221F;
+  --color-ink-light: #45403B;
+  --color-warm-border: rgba(38, 34, 31, 0.09);
+  --color-muted: rgba(38, 34, 31, 0.58);
 
   --font-serif: 'Crimson Pro', 'Georgia', serif;
   --font-sans: 'Karla', system-ui, sans-serif;
@@ -35,9 +35,9 @@ html {
 
 body {
   font-family: var(--font-sans);
-  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-  line-height: 1.7;
-  letter-spacing: 0.005em;
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);
+  line-height: 1.72;
+  letter-spacing: 0.008em;
   color: var(--color-ink);
   background-color: var(--color-stone);
   -webkit-font-smoothing: antialiased;
@@ -54,35 +54,37 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: clamp(2.75rem, 2.2rem + 2.75vw, 4.5rem);
-  line-height: 1.05;
-  letter-spacing: -0.025em;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
   font-weight: 700;
 }
 
 h2 {
   font-size: clamp(2rem, 1.6rem + 1.75vw, 3.25rem);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  line-height: 1.08;
+  letter-spacing: -0.028em;
 }
 
 h3 {
   font-size: clamp(1.375rem, 1.15rem + 0.75vw, 1.75rem);
-  line-height: 1.25;
-  letter-spacing: -0.01em;
+  line-height: 1.22;
+  letter-spacing: -0.015em;
 }
 
 h4 {
   font-size: 1.125rem;
-  line-height: 1.3;
+  line-height: 1.28;
+  letter-spacing: -0.01em;
 }
 
 .overline {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
-  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-terracotta);
+  opacity: 0.9;
 }
 
 /* ── Drop Cap — wabi-sabi first-letter treatment ────────── */
@@ -103,23 +105,23 @@ h4 {
 .pull-quote {
   font-family: var(--font-serif);
   font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
-  line-height: 1.3;
-  letter-spacing: -0.01em;
+  line-height: 1.28;
+  letter-spacing: -0.015em;
   font-style: italic;
   color: var(--color-ink);
   position: relative;
-  padding-left: 1.75rem;
-  border-left: 3px solid var(--color-terracotta);
+  padding-left: 2rem;
+  border-left: 2.5px solid var(--color-terracotta);
 }
 
 /* ── Ink brush stroke divider ─────────────────────────────── */
 
 .brush-stroke {
-  width: 60px;
-  height: 3px;
+  width: 56px;
+  height: 2.5px;
   background: var(--color-terracotta);
   border-radius: 2px;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 /* ── Paper / Linen Texture Overlay ─────────────────────────── */
@@ -155,11 +157,11 @@ h4 {
 /* ── Nav Glassmorphism ─────────────────────────────────────── */
 
 .nav-scrolled {
-  background: rgba(242, 237, 230, 0.88) !important;
-  backdrop-filter: blur(20px) saturate(1.1);
-  -webkit-backdrop-filter: blur(20px) saturate(1.1);
-  border-bottom: 1px solid rgba(44, 40, 37, 0.06);
-  box-shadow: 0 1px 12px rgba(44, 40, 37, 0.04);
+  background: rgba(238, 232, 224, 0.9) !important;
+  backdrop-filter: blur(24px) saturate(1.15);
+  -webkit-backdrop-filter: blur(24px) saturate(1.15);
+  border-bottom: 1px solid rgba(38, 34, 31, 0.06);
+  box-shadow: 0 1px 12px rgba(38, 34, 31, 0.05);
 }
 
 /* ── Dietary Tags ──────────────────────────────────────────── */
@@ -180,13 +182,16 @@ h4 {
 .img-editorial {
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(38, 34, 31, 0.06),
+              0 8px 24px rgba(38, 34, 31, 0.08);
+  border-radius: 10px;
 }
 
 .img-editorial::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(242,237,230,0.06), rgba(196,112,75,0.08));
+  background: linear-gradient(to bottom, rgba(238,232,224,0.05), rgba(184,101,74,0.07));
   mix-blend-mode: multiply;
   pointer-events: none;
   border-radius: inherit;
@@ -223,35 +228,39 @@ h4 {
 
 .card-warm {
   background: var(--color-cream);
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(44, 40, 37, 0.05),
-              0 12px 40px rgba(44, 40, 37, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgba(38, 34, 31, 0.04),
+              0 4px 12px rgba(38, 34, 31, 0.05),
+              0 16px 48px rgba(38, 34, 31, 0.08);
+  border: 1px solid rgba(38, 34, 31, 0.04);
 }
 
 .card-hairline {
   background: var(--color-cream);
-  border: 1px solid rgba(44, 40, 37, 0.06);
-  border-radius: 12px;
+  border: 1px solid rgba(38, 34, 31, 0.07);
+  border-radius: 14px;
+  box-shadow: 0 1px 4px rgba(38, 34, 31, 0.03);
 }
 
 /* ── Hover & Micro-interactions ────────────────────────────── */
 
 .card-lift {
-  transition: transform 400ms var(--ease-organic),
-              box-shadow 400ms var(--ease-organic);
+  transition: transform 500ms var(--ease-organic),
+              box-shadow 500ms var(--ease-organic);
 }
 
 .card-lift:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(44, 40, 37, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(38, 34, 31, 0.06),
+              0 12px 36px rgba(38, 34, 31, 0.1);
 }
 
 .img-zoom {
-  transition: transform 800ms var(--ease-organic);
+  transition: transform 900ms var(--ease-organic);
 }
 
 .img-zoom:hover {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 .link-underline {
@@ -377,37 +386,42 @@ h4 {
   .cafe-grid {
     grid-template-columns: 1fr 1.2fr 1fr;
     grid-template-rows: 260px 260px;
-    gap: 1rem;
+    gap: 1.125rem;
   }
 }
 
 @media (min-width: 1024px) {
   .cafe-grid {
-    grid-template-rows: 280px 280px;
-    gap: 1rem;
+    grid-template-rows: 290px 290px;
+    gap: 1.25rem;
   }
 }
 
 .cafe-grid-item {
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
-  transition: box-shadow 500ms var(--ease-organic);
+  transition: box-shadow 600ms var(--ease-organic),
+              transform 600ms var(--ease-organic);
+  box-shadow: 0 2px 6px rgba(38, 34, 31, 0.05);
 }
 
 .cafe-grid-item:hover {
-  box-shadow: 0 8px 30px rgba(44, 40, 37, 0.12);
+  box-shadow: 0 6px 20px rgba(38, 34, 31, 0.1),
+              0 16px 40px rgba(38, 34, 31, 0.08);
+  transform: translateY(-2px);
 }
 
 .cafe-grid-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 800ms var(--ease-organic);
+  transition: transform 900ms var(--ease-organic),
+              filter 900ms var(--ease-organic);
 }
 
 .cafe-grid-item:hover img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 .cafe-grid-tall {
@@ -434,44 +448,96 @@ select:focus {
 .btn-primary {
   display: inline-flex;
   align-items: center;
-  padding: 14px 32px;
+  padding: 15px 36px;
   background: var(--color-terracotta);
   color: white;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  border-radius: 12px;
-  transition: background 300ms var(--ease-organic), transform 150ms;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: 10px;
+  transition: background 400ms var(--ease-organic),
+              transform 300ms var(--ease-organic),
+              box-shadow 400ms var(--ease-organic);
+  box-shadow: 0 1px 3px rgba(184, 101, 74, 0.2);
 }
 
 .btn-primary:hover {
   background: var(--color-terracotta-dark);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(196, 112, 75, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(184, 101, 74, 0.3),
+              0 8px 24px rgba(184, 101, 74, 0.12);
 }
 
 .btn-primary:active {
-  transform: scale(0.97);
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 1px 4px rgba(184, 101, 74, 0.2);
 }
 
 .btn-outline {
   display: inline-flex;
   align-items: center;
-  padding: 14px 32px;
+  padding: 15px 36px;
   border: 1.5px solid var(--color-ink);
   color: var(--color-ink);
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  border-radius: 12px;
-  transition: border-color 300ms var(--ease-organic), color 300ms var(--ease-organic);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: 10px;
+  transition: border-color 400ms var(--ease-organic),
+              color 400ms var(--ease-organic),
+              transform 300ms var(--ease-organic),
+              box-shadow 400ms var(--ease-organic);
 }
 
 .btn-outline:hover {
   border-color: var(--color-terracotta);
   color: var(--color-terracotta);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(44, 40, 37, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(38, 34, 31, 0.08);
+}
+
+/* ── Selection ─────────────────────────────────────────────── */
+
+::selection {
+  background: rgba(184, 101, 74, 0.18);
+  color: var(--color-ink);
+}
+
+::-moz-selection {
+  background: rgba(184, 101, 74, 0.18);
+  color: var(--color-ink);
+}
+
+/* ── Scrollbar — warm palette ─────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-stone);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(38, 34, 31, 0.15);
+  border-radius: 6px;
+  border: 2px solid var(--color-stone);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(38, 34, 31, 0.25);
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(38, 34, 31, 0.15) var(--color-stone);
+}
+
+/* ── Section spacing refinement ───────────────────────────── */
+
+section + section {
+  border-top: none;
 }
 
 /* ── Reduced Motion ────────────────────────────────────────── */
