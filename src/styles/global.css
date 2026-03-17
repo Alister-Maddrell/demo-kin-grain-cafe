@@ -653,7 +653,7 @@ section + section {
 
 .kins-hero-overlay {
   background:
-    linear-gradient(135deg, rgba(38, 34, 31, 0.85) 0%, rgba(38, 34, 31, 0.6) 40%, rgba(38, 34, 31, 0.4) 70%, rgba(38, 34, 31, 0.7) 100%),
+    linear-gradient(135deg, rgba(38, 34, 31, 0.92) 0%, rgba(38, 34, 31, 0.8) 40%, rgba(38, 34, 31, 0.65) 70%, rgba(38, 34, 31, 0.85) 100%),
     radial-gradient(ellipse at 30% 50%, rgba(184, 101, 74, 0.15) 0%, transparent 60%);
 }
 
@@ -741,7 +741,21 @@ section + section {
 
 /* Hero heading text shadow for readability */
 section.min-h-\[100dvh\] h1 {
-  text-shadow: 0 2px 20px rgba(0,0,0,0.5), 0 1px 6px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 30px rgba(0,0,0,0.7), 0 1px 8px rgba(0,0,0,0.5);
+}
+
+/* Hero body text readability */
+section.min-h-\[100dvh\] p {
+  text-shadow: 0 1px 12px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.3);
+}
+
+section.min-h-\[100dvh\] .overline {
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+}
+
+/* Trust line text */
+section.min-h-\[100dvh\] span {
+  text-shadow: 0 1px 6px rgba(0,0,0,0.3);
 }
 
 /* ── Reduced Motion ────────────────────────────────────────── */
