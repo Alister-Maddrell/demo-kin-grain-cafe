@@ -573,6 +573,38 @@ section + section {
   border-top: none;
 }
 
+/* ══════════════════════════════════════════
+   LAPTOP VIEWPORT — Tighter spacing for ≤900px height
+   ══════════════════════════════════════════ */
+@media (min-width: 1024px) and (max-height: 900px) {
+  section {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  /* Hero needs less vertical space */
+  section:first-of-type {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 2rem + 2vw, 3.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 1.5rem + 1.5vw, 2.5rem);
+  }
+
+  .cafe-grid {
+    grid-template-rows: 220px 220px;
+  }
+
+  article.group.md\:mt-14 {
+    margin-top: 1.5rem;
+  }
+}
+
 /* ── Reduced Motion ────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
