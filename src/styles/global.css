@@ -17,7 +17,7 @@
   --color-ink: #2C2825;
   --color-ink-light: #4A4540;
   --color-warm-border: rgba(44, 40, 37, 0.08);
-  --color-muted: rgba(44, 40, 37, 0.55);
+  --color-muted: rgba(44, 40, 37, 0.62);
 
   --font-serif: 'Crimson Pro', 'Georgia', serif;
   --font-sans: 'Karla', system-ui, sans-serif;
@@ -78,10 +78,10 @@ h4 {
 
 .overline {
   font-family: var(--font-sans);
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-terracotta);
 }
 
@@ -108,8 +108,8 @@ h4 {
   font-style: italic;
   color: var(--color-ink);
   position: relative;
-  padding-left: 1.5rem;
-  border-left: 2px solid var(--color-terracotta);
+  padding-left: 1.75rem;
+  border-left: 3px solid var(--color-terracotta);
 }
 
 /* ── Ink brush stroke divider ─────────────────────────────── */
@@ -224,8 +224,8 @@ h4 {
 .card-warm {
   background: var(--color-cream);
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(44, 40, 37, 0.04),
-              0 12px 40px rgba(44, 40, 37, 0.06);
+  box-shadow: 0 2px 8px rgba(44, 40, 37, 0.05),
+              0 12px 40px rgba(44, 40, 37, 0.08);
 }
 
 .card-hairline {
@@ -265,6 +265,14 @@ h4 {
 
 .link-underline:hover {
   background-size: 100% 1px;
+}
+
+/* ── Standalone link CTAs — larger, more prominent ──────── */
+
+.link-cta {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .btn-press:active {
@@ -384,6 +392,11 @@ h4 {
   border-radius: 8px;
   overflow: hidden;
   position: relative;
+  transition: box-shadow 500ms var(--ease-organic);
+}
+
+.cafe-grid-item:hover {
+  box-shadow: 0 8px 30px rgba(44, 40, 37, 0.12);
 }
 
 .cafe-grid-item img {
@@ -399,6 +412,12 @@ h4 {
 
 .cafe-grid-tall {
   grid-row: span 2;
+}
+
+/* ── Map container — softer radius ─────────────────────────── */
+
+iframe[title*="location"] {
+  border-radius: 16px;
 }
 
 /* ── Form Focus ────────────────────────────────────────────── */
@@ -427,6 +446,8 @@ select:focus {
 
 .btn-primary:hover {
   background: var(--color-terracotta-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(196, 112, 75, 0.25);
 }
 
 .btn-primary:active {
@@ -449,6 +470,8 @@ select:focus {
 .btn-outline:hover {
   border-color: var(--color-terracotta);
   color: var(--color-terracotta);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(44, 40, 37, 0.08);
 }
 
 /* ── Reduced Motion ────────────────────────────────────────── */
