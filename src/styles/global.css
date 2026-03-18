@@ -758,6 +758,145 @@ section.min-h-\[100dvh\] span {
   text-shadow: 0 1px 6px rgba(0,0,0,0.3);
 }
 
+/* ── Mobile Layout Optimisations ───────────────────────────── */
+
+@media (max-width: 767px) {
+  /* Tighter section padding on mobile */
+  section { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
+
+  /* Hero keeps full height */
+  section.min-h-\[100dvh\] { padding-top: 0 !important; padding-bottom: 0 !important; }
+
+  /* Hero content tighter */
+  section.min-h-\[100dvh\] > div:not(.absolute):not(.grain-overlay) {
+    padding-top: 6rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  /* Hero description */
+  section.min-h-\[100dvh\] p.text-lg {
+    font-size: 0.9375rem;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Hero trust line — wrap better */
+  section.min-h-\[100dvh\] .mt-12.flex {
+    margin-top: 2rem !important;
+    gap: 0.75rem 1rem !important;
+    flex-wrap: wrap;
+  }
+
+  /* Story section stats — 3 across tighter */
+  .flex.gap-12 {
+    gap: 1.5rem !important;
+  }
+  .flex.gap-12 .font-serif.text-4xl {
+    font-size: 1.75rem !important;
+  }
+
+  /* Section header margins */
+  .mb-16 { margin-bottom: 2.5rem !important; }
+
+  /* Featured cards — no offset on mobile */
+  article.group.md\:mt-14 { margin-top: 0 !important; }
+
+  /* Cafe grid — 2 columns on mobile */
+  .cafe-grid {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: 140px 140px 140px !important;
+  }
+  .cafe-grid-tall { grid-row: span 2; }
+
+  /* Pull quote smaller */
+  .pull-quote {
+    font-size: 1.25rem !important;
+    padding-left: 1.25rem !important;
+  }
+
+  /* CTAs full width on small screens */
+  .btn-primary, .btn-outline {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Floating reserve button compact on mobile */
+  #floating-reserve {
+    padding: 0.625rem 1rem !important;
+    font-size: 0.8125rem !important;
+    bottom: 1rem !important;
+    right: 1rem !important;
+  }
+  #floating-reserve svg { width: 14px !important; height: 14px !important; }
+
+  /* Event date badge smaller */
+  .event-date-badge {
+    width: 52px;
+    height: 60px;
+  }
+  .event-date-badge .day { font-size: 1.375rem; }
+
+  /* Drop cap smaller on mobile */
+  .drop-cap::first-letter {
+    font-size: 3em;
+  }
+
+  /* Tighter heading spacing */
+  h2 { margin-bottom: 1.5rem; }
+
+  /* Contact page image shorter */
+  .img-editorial .aspect-\[4\/5\] { aspect-ratio: 3/4 !important; }
+
+  /* Form fields tighter */
+  form .space-y-5 > * + * { margin-top: 0.875rem !important; }
+
+  /* Map container on mobile */
+  iframe[title*="location"] { border-radius: 10px !important; }
+
+  /* Newsletter section tighter */
+  .flex.flex-col.items-center.text-center { gap: 0.75rem; }
+
+  /* Footer tighter padding */
+  footer { padding-top: 2.5rem !important; }
+
+  /* Overline spacing on mobile */
+  .overline { margin-bottom: 0.5rem !important; }
+
+  /* Brush stroke divider smaller */
+  .brush-stroke { width: 40px; margin-top: 1.5rem !important; }
+
+  /* Image editorial softer shadow on mobile */
+  .img-editorial {
+    box-shadow: 0 2px 6px rgba(38, 34, 31, 0.06),
+                0 6px 16px rgba(38, 34, 31, 0.06) !important;
+  }
+}
+
+@media (max-width: 479px) {
+  /* Smaller headings on tiny screens */
+  h1 { font-size: clamp(2rem, 9vw, 2.75rem) !important; }
+
+  /* Stats stack vertically on very narrow */
+  .flex.gap-12 {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  /* Cafe grid single column */
+  .cafe-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+  }
+  .cafe-grid-tall { grid-row: span 1; }
+  .cafe-grid-item { min-height: 180px; }
+
+  /* Buttons slightly tighter */
+  .btn-primary, .btn-outline {
+    padding: 12px 24px !important;
+    font-size: 0.8rem !important;
+  }
+}
+
 /* ── Reduced Motion ────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
