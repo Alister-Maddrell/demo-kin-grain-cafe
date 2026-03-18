@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Reserve a Table | Kin & Grain Sydney CBD"
+  description="Reserve your table at Kin & Grain, 22 Market Street Sydney CBD. Book ahead for brunch, lunch, or a private event — pick a time that works for you."
+>
+  <!-- ═══ PAGE HEADER ═══════════════════════════════════════════ -->
+  <section class="relative overflow-hidden" style="background-color: var(--color-ink);">
+    <!-- Background image -->
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=1920&h=600&fit=crop"
+        alt="Warm cafe table setting ready for guests"
+        class="w-full h-full object-cover"
+        style="opacity: 0.35;"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(38,34,31,0.4) 0%, rgba(38,34,31,0.75) 100%);"></div>
+    </div>
+    <div class="grain-overlay absolute inset-0"></div>
+
+    <div class="relative max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12 py-20 md:py-28 text-center">
+      <p class="overline !text-terracotta-light mb-4 reveal stagger-1">Reservations</p>
+      <div class="brush-stroke mx-auto mb-6 reveal stagger-2"></div>
+      <h1 class="mb-5 reveal stagger-2" style="color: #fff;">Reserve Your Table</h1>
+      <p class="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed reveal stagger-3" style="color: rgba(255,255,255,0.75);">
+        Secure your spot for brunch, lunch, or a private gathering. Pick a time and we'll have everything ready when you arrive.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ CAL.COM BOOKING ═══════════════════════════════════════ -->
+  <section class="py-16 md:py-24" style="background-color: var(--color-cream);">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
+      <div class="card-warm relative overflow-hidden">
+        <div class="p-7 md:p-9">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 flex items-center justify-center shrink-0" style="background: rgba(184,101,74,0.1); border: 1px solid rgba(184,101,74,0.2); border-radius: 10px;">
+              <svg class="w-5 h-5" style="color: var(--color-terracotta);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
+            </div>
+            <div>
+              <p class="font-serif text-lg font-semibold" style="color: var(--color-ink);">Choose a Time</p>
+              <p class="text-sm" style="color: var(--color-muted);">Select an available slot for your reservation</p>
+            </div>
+          </div>
+
+          <!-- Cal.com Embed Container -->
+          <div id="cal-booking" style="min-height: 500px;"></div>
+        </div>
+      </div>
+
+      <!-- Info cards -->
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-5">
+        <div class="reveal stagger-1 card-hairline flex items-start gap-3 p-5">
+          <div class="w-9 h-9 flex items-center justify-center shrink-0" style="background: rgba(184,101,74,0.1); border: 1px solid rgba(184,101,74,0.15); border-radius: 10px;">
+            <svg class="w-4 h-4" style="color: var(--color-terracotta);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>
+          </div>
+          <div>
+            <p class="font-serif font-semibold text-sm" style="color: var(--color-ink);">Groups Welcome</p>
+            <p class="text-xs mt-0.5" style="color: var(--color-muted);">Tables for 2–12 guests available</p>
+          </div>
+        </div>
+        <div class="reveal stagger-2 card-hairline flex items-start gap-3 p-5">
+          <div class="w-9 h-9 flex items-center justify-center shrink-0" style="background: rgba(184,101,74,0.1); border: 1px solid rgba(184,101,74,0.15); border-radius: 10px;">
+            <svg class="w-4 h-4" style="color: var(--color-terracotta);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <p class="font-serif font-semibold text-sm" style="color: var(--color-ink);">Instant Confirmation</p>
+            <p class="text-xs mt-0.5" style="color: var(--color-muted);">You'll receive an email straightaway</p>
+          </div>
+        </div>
+        <div class="reveal stagger-3 card-hairline flex items-start gap-3 p-5">
+          <div class="w-9 h-9 flex items-center justify-center shrink-0" style="background: rgba(184,101,74,0.1); border: 1px solid rgba(184,101,74,0.15); border-radius: 10px;">
+            <svg class="w-4 h-4" style="color: var(--color-terracotta);" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-6.219-8.56"/></svg>
+          </div>
+          <div>
+            <p class="font-serif font-semibold text-sm" style="color: var(--color-ink);">Free to Cancel</p>
+            <p class="text-xs mt-0.5" style="color: var(--color-muted);">Change plans? No worries at all</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Walk-in note -->
+      <div class="reveal stagger-4 mt-8 p-7 text-center relative overflow-hidden" style="background-color: var(--color-ink); border-radius: 12px;">
+        <div class="grain-overlay absolute inset-0"></div>
+        <div class="relative">
+          <p class="overline !text-terracotta-light mb-2">Walk-ins always welcome</p>
+          <p class="text-sm max-w-md mx-auto" style="color: rgba(255,255,255,0.65);">No reservation? No problem. We keep tables for walk-ins every day — but booking guarantees your spot during peak hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<!-- Cal.com Inline Embed -->
+<script is:inline>
+  (function (C, A, L) {
+    let p = function (a, ar) { a.q.push(ar); };
+    let d = C.document;
+    C.Cal = C.Cal || function () {
+      let cal = C.Cal;
+      let ar = arguments;
+      if (!cal.loaded) {
+        cal.ns = {};
+        cal.q = cal.q || [];
+        d.head.appendChild(d.createElement("script")).src = A;
+        cal.loaded = true;
+      }
+      if (ar[0] === L) {
+        const api = function () { p(api, arguments); };
+        const namespace = ar[1];
+        api.q = api.q || [];
+        if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar);
+        return;
+      }
+      p(cal, ar);
+    };
+  })(window, "https://app.cal.com/embed/embed.js", "init");
+
+  Cal("init", "reservation", { origin: "https://cal.com" });
+  Cal.ns.reservation("inline", {
+    elementOrSelector: "#cal-booking",
+    calLink: "alister-maddrell-rmtqo9/consultation",
+    layout: "month_view",
+    config: { theme: "light" },
+  });
+  Cal.ns.reservation("ui", {
+    theme: "light",
+    styles: { branding: { brandColor: "#B8654A" } },
+    hideEventTypeDetails: false,
+    layout: "month_view",
+  });
+</script>

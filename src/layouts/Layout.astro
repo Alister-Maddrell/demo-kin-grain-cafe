@@ -72,7 +72,7 @@ const { title, description } = Astro.props;
       "servesCuisine": ["Australian", "Brunch", "Specialty Coffee"],
       "priceRange": "$$",
       "menu": "https://www.kinandgrain.com.au/menu",
-      "acceptsReservations": "false",
+      "acceptsReservations": "true",
       "currenciesAccepted": "AUD",
       "paymentAccepted": "Cash, Credit Card, EFTPOS",
       "areaServed": {
@@ -94,6 +94,18 @@ const { title, description } = Astro.props;
       <slot />
     </main>
     <Footer />
+
+    <!-- Floating reservation button -->
+    <a
+      href="/reservation"
+      id="floating-reserve"
+      class="fixed bottom-6 right-6 z-40 flex items-center gap-2.5 px-5 py-3 text-white text-sm font-medium tracking-wide rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl btn-press"
+      style="background-color: var(--color-terracotta); box-shadow: 0 8px 24px rgba(184,101,74,0.35);"
+      aria-label="Reserve a table"
+    >
+      <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
+      Reserve a Table
+    </a>
 
     <!-- Scroll reveal observer -->
     <script>

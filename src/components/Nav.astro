@@ -37,10 +37,11 @@ const isActive = (path: string) => {
 
       <!-- CTA -->
       <a
-        href="/contact"
-        class="hidden md:inline-flex items-center px-5 py-2 text-[0.8125rem] font-medium tracking-[0.04em] rounded-[10px] transition-all duration-300 border-1.5 border-terracotta text-terracotta hover:bg-terracotta hover:text-white"
+        href="/reservation"
+        class="hidden md:inline-flex items-center gap-2 px-5 py-2 text-[0.8125rem] font-medium tracking-[0.04em] rounded-[10px] transition-all duration-300 bg-terracotta text-white hover:bg-terracotta-dark btn-press"
       >
-        Visit Us
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
+        Reserve
       </a>
 
       <!-- Mobile menu toggle -->
@@ -62,6 +63,7 @@ const isActive = (path: string) => {
         { href: '/', label: 'Home' },
         { href: '/menu', label: 'Menu' },
         { href: '/contact', label: 'Contact' },
+        { href: '/reservation', label: 'Reservation' },
       ].map(({ href, label }) => (
         <a
           href={href}
@@ -73,8 +75,9 @@ const isActive = (path: string) => {
           {label}
         </a>
       ))}
-      <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 bg-terracotta text-white text-sm font-medium rounded-[10px] hover:bg-terracotta-dark transition-colors mt-2 btn-press">
-        Visit Us
+      <a href="/reservation" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-terracotta text-white text-sm font-medium rounded-[10px] hover:bg-terracotta-dark transition-colors mt-2 btn-press">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
+        Reserve a Table
       </a>
     </div>
   </div>
