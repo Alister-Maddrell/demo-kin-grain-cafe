@@ -33,6 +33,10 @@ html {
   scroll-padding-top: 5rem;
 }
 
+@media (max-width: 767px) {
+  html { scroll-padding-top: 3.5rem; }
+}
+
 body {
   font-family: var(--font-sans);
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);
@@ -761,27 +765,56 @@ section.min-h-\[100dvh\] span {
 /* ── Mobile Layout Optimisations ───────────────────────────── */
 
 @media (max-width: 767px) {
+  /* Compact nav on mobile — target ~52px */
+  #main-nav .h-\[72px\] { height: 52px !important; }
+  #main-nav + .h-\[72px\] { height: 52px !important; }
+
   /* Tighter section padding on mobile */
   section { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
 
-  /* Hero keeps full height */
-  section.min-h-\[100dvh\] { padding-top: 0 !important; padding-bottom: 0 !important; }
-
-  /* Hero content tighter */
-  section.min-h-\[100dvh\] > div:not(.absolute):not(.grain-overlay) {
-    padding-top: 6rem !important;
-    padding-bottom: 5rem !important;
+  /* Hero — push content toward top quarter of viewport */
+  section.min-h-\[100dvh\] {
+    align-items: flex-start !important;
+    padding-top: calc(25dvh - 6rem) !important;
+    padding-bottom: 0 !important;
   }
 
-  /* Hero description */
+  /* Hero content — compact internal padding */
+  section.min-h-\[100dvh\] > div:not(.absolute):not(.grain-overlay) {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Compact nav logo */
+  #main-nav .font-serif.text-\[1\.4rem\] {
+    font-size: 1.2rem !important;
+  }
+
+  /* Hero description — tighter spacing */
   section.min-h-\[100dvh\] p.text-lg {
     font-size: 0.9375rem;
-    margin-bottom: 2rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Hero heading — less bottom margin */
+  section.min-h-\[100dvh\] h1 {
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* Hero overline — less bottom margin */
+  section.min-h-\[100dvh\] .overline {
+    margin-bottom: 0.375rem !important;
+  }
+
+  /* Hero CTA buttons — tighter */
+  section.min-h-\[100dvh\] .btn-primary,
+  section.min-h-\[100dvh\] .btn-outline {
+    padding: 12px 28px !important;
   }
 
   /* Hero trust line — wrap better */
   section.min-h-\[100dvh\] .mt-12.flex {
-    margin-top: 2rem !important;
+    margin-top: 1.5rem !important;
     gap: 0.75rem 1rem !important;
     flex-wrap: wrap;
   }
