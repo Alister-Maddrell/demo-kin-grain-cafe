@@ -31,6 +31,11 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 @media (max-width: 767px) {
@@ -648,6 +653,12 @@ section + section {
 
 .kins-hero-img {
   animation: kinsHeroZoom 20s ease-out forwards;
+  max-width: 100%;
+}
+
+/* Ensure hero image container clips overflow from scale animation */
+section.min-h-\[100dvh\] > .absolute.inset-0 {
+  overflow: hidden;
 }
 
 @keyframes kinsHeroZoom {
