@@ -44,7 +44,7 @@ import Layout from '../layouts/Layout.astro';
         <p class="overline !text-terracotta-light !mb-0">Sydney CBD — Est. 2019</p>
       </div>
 
-      <!-- MIDDLE ZONE: Heading + description -->
+      <!-- MIDDLE ZONE: Heading + description + CTAs grouped -->
       <div class="kins-hero-zone-mid">
         <h1 class="kins-hero-heading kins-hero-reveal" style="color: #fff; --delay: 1">
           Your Morning<br/>
@@ -54,11 +54,7 @@ import Layout from '../layouts/Layout.astro';
         <p class="kins-hero-desc kins-hero-reveal" style="color: rgba(255,255,255,0.75); --delay: 2">
           Single-origin coffee &amp; scratch-made brunch on Market Street.
         </p>
-      </div>
-
-      <!-- BOTTOM ZONE: CTAs + trust strip -->
-      <div class="kins-hero-zone-bot">
-        <div class="flex gap-3 kins-hero-ctas kins-hero-reveal" style="--delay: 3">
+        <div class="flex gap-3 kins-hero-ctas kins-hero-reveal" style="--delay: 3; margin-top: 1.25rem;">
           <a href="/menu" class="btn-primary !bg-terracotta hover:!bg-terracotta-dark">
             View Menu
           </a>
@@ -66,8 +62,10 @@ import Layout from '../layouts/Layout.astro';
             Visit Us
           </a>
         </div>
+      </div>
 
-        <!-- Trust strip -->
+      <!-- BOTTOM ZONE: Trust strip only -->
+      <div class="kins-hero-zone-bot">
         <div class="kins-trust-strip kins-hero-reveal" style="--delay: 4">
           <span class="text-terracotta">★★★★★</span>
           <span class="kins-trust-text">4.9 Google</span>
