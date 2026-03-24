@@ -1011,3 +1011,8 @@ section.min-h-\[100dvh\] .max-w-2xl::after {
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Clip scaled hero images on mobile */
+@media (max-width: 767px) {
+  html { overflow-x: clip !important; }
+}
