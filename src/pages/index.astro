@@ -48,10 +48,10 @@ import Layout from '../layouts/Layout.astro';
         </h1>
 
         <p class="text-lg leading-relaxed mb-10 max-w-[46ch] kins-hero-reveal" style="color: rgba(255,255,255,0.85); --delay: 2">
-          Walk in to the aroma of beans roasted for flavour, not volume. Settle into a seasonal plate made fresh from 12 local suppliers. This is your everyday escape.
+          Single-origin coffee and scratch-made brunch — your everyday escape on Market Street.
         </p>
 
-        <div class="flex flex-wrap gap-4 kins-hero-reveal" style="--delay: 3">
+        <div class="flex flex-wrap gap-4 kins-hero-ctas kins-hero-reveal" style="--delay: 3">
           <a href="/menu" class="btn-primary !bg-terracotta hover:!bg-terracotta-dark">
             View Our Menu
           </a>
@@ -61,15 +61,18 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <!-- Trust line -->
-        <div class="mt-12 flex items-center gap-6 kins-hero-reveal" style="--delay: 4">
-          <div class="flex items-center gap-2">
-            <span class="text-terracotta text-sm">★★★★★</span>
-            <span class="text-white/50 text-sm">4.9 on Google</span>
+        <div class="kins-trust-line kins-hero-reveal" style="--delay: 4">
+          <div class="kins-trust-separator"></div>
+          <div class="flex items-center gap-6 flex-wrap">
+            <div class="flex items-center gap-2">
+              <span class="text-terracotta text-sm">★★★★★</span>
+              <span class="text-white/50 text-sm">4.9 on Google</span>
+            </div>
+            <span class="w-px h-4 bg-white/15"></span>
+            <span class="text-white/50 text-sm">Open 7 days</span>
+            <span class="w-px h-4 bg-white/15"></span>
+            <span class="text-white/50 text-sm">22 Market St</span>
           </div>
-          <span class="w-px h-4 bg-white/15"></span>
-          <span class="text-white/50 text-sm">Open 7 days</span>
-          <span class="w-px h-4 bg-white/15"></span>
-          <span class="text-white/50 text-sm">22 Market St</span>
         </div>
       </div>
     </div>

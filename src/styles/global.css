@@ -772,17 +772,17 @@ section.min-h-\[100dvh\] span {
   /* Tighter section padding on mobile */
   section { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
 
-  /* Hero — push content toward top quarter of viewport */
+  /* Hero — push content toward top of viewport */
   section.min-h-\[100dvh\] {
     align-items: flex-start !important;
-    padding-top: calc(25dvh - 6rem) !important;
+    padding-top: 0 !important;
     padding-bottom: 0 !important;
   }
 
   /* Hero content — compact internal padding */
   section.min-h-\[100dvh\] > div:not(.absolute):not(.grain-overlay) {
-    padding-top: 3.5rem !important;
-    padding-bottom: 3rem !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 2rem !important;
   }
 
   /* Compact nav logo */
@@ -792,18 +792,45 @@ section.min-h-\[100dvh\] span {
 
   /* Hero description — tighter spacing */
   section.min-h-\[100dvh\] p.text-lg {
-    font-size: 0.9375rem;
-    margin-bottom: 1.5rem !important;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem !important;
+    line-height: 1.5;
   }
 
-  /* Hero heading — less bottom margin */
+  /* Hero heading — less bottom margin, tighter size */
   section.min-h-\[100dvh\] h1 {
-    margin-bottom: 0.75rem !important;
+    margin-bottom: 0.375rem !important;
+    font-size: clamp(2rem, 8.5vw, 2.5rem) !important;
   }
 
   /* Hero overline — less bottom margin */
   section.min-h-\[100dvh\] .overline {
-    margin-bottom: 0.375rem !important;
+    margin-bottom: 0.125rem !important;
+    font-size: 0.6875rem !important;
+  }
+
+  /* Hero CTA row — tighter gap */
+  .kins-hero-ctas {
+    gap: 0.5rem !important;
+  }
+
+  /* Hero trust line — compact on mobile */
+  .kins-trust-line {
+    margin-top: 0.625rem !important;
+  }
+  .kins-trust-separator {
+    margin-bottom: 0.5rem;
+  }
+  .kins-trust-line .flex {
+    gap: 0.375rem 0.625rem !important;
+  }
+  .kins-trust-line .text-sm {
+    font-size: 0.75rem !important;
+  }
+
+  /* Hero gradient separator — tighter on mobile */
+  section.min-h-\[100dvh\] .max-w-2xl::after {
+    margin-top: 0.5rem;
   }
 
   /* Hero CTA buttons — tighter */
@@ -812,12 +839,7 @@ section.min-h-\[100dvh\] span {
     padding: 12px 28px !important;
   }
 
-  /* Hero trust line — wrap better */
-  section.min-h-\[100dvh\] .mt-12.flex {
-    margin-top: 1.5rem !important;
-    gap: 0.75rem 1rem !important;
-    flex-wrap: wrap;
-  }
+  /* (trust line now handled by .kins-trust-line rules above) */
 
   /* Story section stats — 3 across tighter */
   .flex.gap-12 {
@@ -846,11 +868,19 @@ section.min-h-\[100dvh\] span {
     padding-left: 1.25rem !important;
   }
 
-  /* CTAs full width on small screens */
+  /* CTAs full width on small screens — except hero */
   .btn-primary, .btn-outline {
     width: 100%;
     justify-content: center;
     text-align: center;
+  }
+
+  /* Hero CTAs sit side by side */
+  .kins-hero-ctas .btn-primary,
+  .kins-hero-ctas .btn-outline {
+    width: auto;
+    padding: 9px 20px !important;
+    font-size: 0.775rem !important;
   }
 
   /* Floating reserve button compact on mobile */
@@ -928,6 +958,36 @@ section.min-h-\[100dvh\] span {
     padding: 12px 24px !important;
     font-size: 0.8rem !important;
   }
+}
+
+/* ── Hero Editorial Refinements ─────────────────────────────── */
+
+/* Overline — more presence */
+section.min-h-\[100dvh\] .overline {
+  font-size: 0.8125rem;
+  letter-spacing: 0.28em;
+}
+
+/* Trust line — pulled up below CTAs */
+.kins-trust-line {
+  margin-top: 1.25rem;
+}
+
+.kins-trust-separator {
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-terracotta-light), transparent);
+  opacity: 0.5;
+  margin-bottom: 0.875rem;
+}
+
+/* Soft gradient fade at bottom of hero content — editorial depth */
+section.min-h-\[100dvh\] .max-w-2xl::after {
+  content: '';
+  display: block;
+  margin-top: 2rem;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(208,136,108,0.35) 0%, rgba(208,136,108,0.12) 40%, transparent 80%);
 }
 
 /* ── Reduced Motion ────────────────────────────────────────── */
