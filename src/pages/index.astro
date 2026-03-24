@@ -8,7 +8,7 @@ import Layout from '../layouts/Layout.astro';
 >
 
   <!-- ═══ HERO ═══════════════════════════════════════════════════ -->
-  <section class="relative overflow-hidden min-h-[100dvh] flex items-center" style="background-color: var(--color-ink);">
+  <section class="relative overflow-hidden kins-hero-section" style="background-color: var(--color-ink);">
     <!-- Background image -->
     <div class="absolute inset-0">
       <img
@@ -36,53 +36,48 @@ import Layout from '../layouts/Layout.astro';
       <p class="kins-polaroid-caption">The Kin Bowl — $22</p>
     </div>
 
-    <!-- Content -->
-    <div class="relative z-10 max-w-[1200px] mx-auto px-6 md:px-8 lg:px-12 py-32 w-full">
-      <div class="max-w-2xl">
-        <p class="overline !text-terracotta-light mb-6 kins-hero-reveal" style="--delay: 0">Sydney CBD — Est. 2019</p>
+    <!-- Content — editorial full-bleed distributed layout -->
+    <div class="relative z-10 kins-hero-canvas">
 
-        <h1 class="mb-6 kins-hero-reveal" style="color: #fff; --delay: 1">
+      <!-- TOP ZONE: Overline -->
+      <div class="kins-hero-zone-top kins-hero-reveal" style="--delay: 0">
+        <p class="overline !text-terracotta-light !mb-0">Sydney CBD — Est. 2019</p>
+      </div>
+
+      <!-- MIDDLE ZONE: Heading + description -->
+      <div class="kins-hero-zone-mid">
+        <h1 class="kins-hero-heading kins-hero-reveal" style="color: #fff; --delay: 1">
           Your Morning<br/>
           <span class="kins-hero-script">Ritual,</span><br/>
           Perfected.
         </h1>
-
-        <p class="text-lg leading-relaxed mb-10 max-w-[46ch] kins-hero-reveal" style="color: rgba(255,255,255,0.85); --delay: 2">
-          Single-origin coffee and scratch-made brunch — your everyday escape on Market Street.
+        <p class="kins-hero-desc kins-hero-reveal" style="color: rgba(255,255,255,0.75); --delay: 2">
+          Single-origin coffee &amp; scratch-made brunch on Market Street.
         </p>
+      </div>
 
-        <div class="flex flex-wrap gap-4 kins-hero-ctas kins-hero-reveal" style="--delay: 3">
+      <!-- BOTTOM ZONE: CTAs + trust strip -->
+      <div class="kins-hero-zone-bot">
+        <div class="flex gap-3 kins-hero-ctas kins-hero-reveal" style="--delay: 3">
           <a href="/menu" class="btn-primary !bg-terracotta hover:!bg-terracotta-dark">
-            View Our Menu
+            View Menu
           </a>
           <a href="/contact" class="btn-outline !border-white/30 !text-white hover:!border-terracotta hover:!text-terracotta">
             Visit Us
           </a>
         </div>
 
-        <!-- Trust line -->
-        <div class="kins-trust-line kins-hero-reveal" style="--delay: 4">
-          <div class="kins-trust-separator"></div>
-          <div class="flex items-center gap-6 flex-wrap">
-            <div class="flex items-center gap-2">
-              <span class="text-terracotta text-sm">★★★★★</span>
-              <span class="text-white/50 text-sm">4.9 on Google</span>
-            </div>
-            <span class="w-px h-4 bg-white/15"></span>
-            <span class="text-white/50 text-sm">Open 7 days</span>
-            <span class="w-px h-4 bg-white/15"></span>
-            <span class="text-white/50 text-sm">22 Market St</span>
-          </div>
+        <!-- Trust strip -->
+        <div class="kins-trust-strip kins-hero-reveal" style="--delay: 4">
+          <span class="text-terracotta">★★★★★</span>
+          <span class="kins-trust-text">4.9 Google</span>
+          <span class="kins-trust-dot"></span>
+          <span class="kins-trust-text">Open 7 days</span>
+          <span class="kins-trust-dot"></span>
+          <span class="kins-trust-text">22 Market St</span>
         </div>
       </div>
-    </div>
 
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 kins-scroll-indicator">
-      <div class="flex flex-col items-center gap-3">
-        <span class="text-[0.6rem] font-semibold tracking-[4px] uppercase text-white/25">Explore</span>
-        <div class="w-px h-10 bg-gradient-to-b from-terracotta/50 to-transparent kins-scroll-line"></div>
-      </div>
     </div>
   </section>
 
