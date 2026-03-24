@@ -783,17 +783,17 @@ section.min-h-\[100dvh\] span {
   /* Tighter section padding on mobile */
   section { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
 
-  /* Hero — push content toward top of viewport */
+  /* Hero — vertically center content in viewport */
   section.min-h-\[100dvh\] {
-    align-items: flex-start !important;
+    align-items: center !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
   }
 
-  /* Hero content — compact internal padding */
+  /* Hero content — let flexbox centering handle vertical position */
   section.min-h-\[100dvh\] > div:not(.absolute):not(.grain-overlay) {
-    padding-top: 0.75rem !important;
-    padding-bottom: 2rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
 
   /* Compact nav logo */
